@@ -1,103 +1,297 @@
+"use client";
+import { Box } from "@/registry/block/box/box-gradient/box";
+import CardCookies from "@/registry/block/card-cookies/card-cookies-1/card-cookies";
+import CardCookies2 from "@/registry/block/card-cookies/card-cookies-2/card-cookies";
+import CardFeature from "@/registry/block/card-feature/card-feature-1/card-feature";
+import CardNotification from "@/registry/block/card-notification/card-notification-1/card-notification";
+import CardPeople from "@/registry/block/card-people/card-people-1/card-people";
+import CardPricing from "@/registry/block/card-pricing/card-pricing-1/card-pricing";
+import CardPricing2 from "@/registry/block/card-pricing/card-pricing-2/card-pricing";
+import CardPricing3 from "@/registry/block/card-pricing/card-pricing-3/card-pricing";
+import CardPricing4 from "@/registry/block/card-pricing/card-pricing-4/card-pricing";
+import CardPricing5 from "@/registry/block/card-pricing/card-pricing-5/card-pricing";
+import CardService from "@/registry/block/card-service/card-service-1/card-service";
+import CardService2 from "@/registry/block/card-service/card-service-2/card-service";
+import CardTestimony from "@/registry/block/card-testimony/card-testimony-1/card-testimony";
+import CardTestimony2 from "@/registry/block/card-testimony/card-testimony-2/card-testimony";
+import CTASecond from "@/registry/block/cta-second/cta-second-1/cta-second";
+import ModeToggle from "@/registry/block/mode-toggle/mode-toggle-dropdown/mode-toggle";
+import ModeToggle2 from "@/registry/block/mode-toggle/mode-toggle-button/mode-toggle";
+import { ScrollToTop } from "@/registry/block/scroll-to-top/scroll-to-top-1/scroll-to-top";
+import Background from "@/registry/components/background/select";
+import { Button } from "@/registry/components/button/select";
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+} from "@/registry/components/card/card-shadcn/card";
+import Code from "@/registry/components/code/code-1/code";
+import { ScrollReveal, SlideIn } from "@/registry/components/framer";
+import AutoScrollReveal from "@/registry/components/framer/framer-auto-scroll-reveal/framer-auto-scroll-reveal";
+import Faq from "@/registry/section/faq/faq1/faq";
+import Faq2 from "@/registry/section/faq/faq2/faq";
+import { ArrowRight } from "lucide-react";
 import Image from "next/image";
+import { CookiesSettings } from "@/registry/block/cookies/cookies-setting/cookies-setting";
+import CompanyLogos from "@/registry/section/company-logos/company-logos-1/company-logos";
+import { Footer } from "@/registry/section/footer/footer-1/footer";
+import { ScrollToDown } from "@/registry/block/scroll-to-down/scroll-to-down-1/scroll-to-down";
+import DialogScroll from "@/registry/block/dialog/dialog-scroll/dialog-scroll";
+import UploadImage from "@/registry/block/upload-image/upload-image-1/upload-image";
+import LatestArticles from "@/registry/section/latest-articles/latest-articles-1/latest-articles";
+import CopyStringButton from "@/registry/block/copy-button/copy-button-string/copy-button";
+import CardBlogPost from "@/registry/block/card-blog-post/card-blog-post-1/card-blog-post";
+import CardCheckout from "@/registry/block/card-checkout/card-checkout-1/card-checkout";
+import CardImage from "@/registry/block/card-image/card-image-1/card-image";
+import Announcement from "@/registry/components/announcement/announcement-1/announcement";
 
+const cards = [
+  <CardBlogPost key="card-blog-post" />,
+  <CardImage key="card-image" />,
+  <CardCheckout key="card-checkout" />,
+  <CardService key="card-service-1" />,
+  <CardService2 key="card-service-2" />,
+  <CardFeature key="card-feature" />,
+  <CardPeople key="card-people" />,
+  <CardNotification key="card-notification" />,
+  <CardPricing key="card-pricing" />,
+  <CardPricing2 key="card-pricing2" />,
+  <CardPricing3 key="card-pricing3" />,
+  <CardPricing4 key="card-pricing4" />,
+  <CardPricing5 key="card-pricing5" />,
+  <CardTestimony key="card-testimony" />,
+  <CardTestimony2 key="card-testimony2" />,
+  <CardCookies key="card-cookies" />,
+  <CardCookies2 key="card-cookies-fixed" />,
+  <CookiesSettings key="cookies-settings" />,
+];
+export { cards };
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
+    <>
+      <ScrollToDown />
+      <Background />
+      <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
+        <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
+          <ModeToggle2 />
+          <Announcement>
+            New snippets ⚡️
+            <span className="inline-flex items-center pl-2 text-black dark:text-white">
+              Read more{" "}
+              <ArrowRight
+                className="pl-0.5 text-black dark:text-white"
+                size={16}
+              />
+            </span>
+          </Announcement>
+          <DialogScroll />
+          <UploadImage />
+          <CompanyLogos />
+          {/* <div className="flex flex-col w-full gap-4"> */}
+          <AutoScrollReveal once={false} components={cards} />
+          {/* </div> */}
+          <ModeToggle />
+          <ModeToggle2 />
+          <Card>
+            <CardHeader>
+              <CardTitle>Get started with Next.js</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p className="text-sm/6">
+                Edit <Code>src/app/page.tsx</Code> and save to change this page.
+              </p>
+            </CardContent>
+          </Card>
+          <Image
+            className="dark:invert"
+            src="/next.svg"
+            alt="Next.js logo"
+            width={180}
+            height={38}
+            priority
+          />
+          <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
+            <li className="mb-2 tracking-[-.01em]">
+              Get started by editing <Code>src/app/page.tsx</Code>.
+            </li>
+            <li className="tracking-[-.01em]">
+              Save and see your changes instantly.
+            </li>
+          </ol>
+          <Box>
+            <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
+              <li className="mb-2 tracking-[-.01em]">
+                Get started by editing{" "}
+                <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
+                  src/app/page.tsx
+                </code>
+                .
+              </li>
+              <li className="tracking-[-.01em]">
+                Save and see your changes instantly.
+              </li>
+            </ol>
+          </Box>
+          <CopyStringButton text="Bisikan manis" />
+          <LatestArticles />
+          <ScrollReveal>
+            <SlideIn direction={"bottom"}>
+              <div className="flex gap-4 items-center flex-col sm:flex-row">
+                <Button>Deploy now</Button>
+                <CTASecond>Ralhafnioh j9ajpihwh</CTASecond>
+              </div>
+            </SlideIn>
+          </ScrollReveal>
+          <div className="max-w-[768px] mx-auto">
+            <Faq />
+            <Faq2 />
+          </div>
+        </main>
+        <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
           <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+            className="flex items-center gap-2 hover:underline hover:underline-offset-4"
+            href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
             target="_blank"
             rel="noopener noreferrer"
           >
             <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+              aria-hidden
+              src="/file.svg"
+              alt="File icon"
+              width={16}
+              height={16}
             />
-            Deploy now
+            Learn
           </a>
           <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+            className="flex items-center gap-2 hover:underline hover:underline-offset-4"
+            href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Read our docs
+            <Image
+              aria-hidden
+              src="/window.svg"
+              alt="Window icon"
+              width={16}
+              height={16}
+            />
+            Examples
           </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+          <a
+            className="flex items-center gap-2 hover:underline hover:underline-offset-4"
+            href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Image
+              aria-hidden
+              src="/globe.svg"
+              alt="Globe icon"
+              width={16}
+              height={16}
+            />
+            Go to nextjs.org →
+          </a>
+        </footer>
+      </div>
+      <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
+        <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
           <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
+            className="dark:invert"
+            src="/next.svg"
+            alt="Next.js logo"
+            width={180}
+            height={38}
+            priority
           />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+          <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
+            <li className="mb-2 tracking-[-.01em]">
+              Get started by editing{" "}
+              <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
+                src/app/page.tsx
+              </code>
+              .
+            </li>
+            <li className="tracking-[-.01em]">
+              Save and see your changes instantly.
+            </li>
+          </ol>
+          <Box>
+            <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
+              <li className="mb-2 tracking-[-.01em]">
+                Get started by editing{" "}
+                <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
+                  src/app/page.tsx
+                </code>
+                .
+              </li>
+              <li className="tracking-[-.01em]">
+                Save and see your changes instantly.
+              </li>
+            </ol>
+          </Box>
+          <ScrollReveal once={false}>
+            <SlideIn direction={"bottom"}>
+              <div className="flex gap-4 items-center flex-col sm:flex-row">
+                <Button>Deploy now</Button>
+                <Button>Read our docs</Button>
+              </div>
+            </SlideIn>
+          </ScrollReveal>
+        </main>
+        <footer className="row-start-3 relative flex gap-[24px] flex-wrap items-center justify-center">
+          <Background />
+          <a
+            className="flex items-center gap-2 hover:underline hover:underline-offset-4"
+            href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Image
+              aria-hidden
+              src="/file.svg"
+              alt="File icon"
+              width={16}
+              height={16}
+            />
+            Learn
+          </a>
+          <a
+            className="flex items-center gap-2 hover:underline hover:underline-offset-4"
+            href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Image
+              aria-hidden
+              src="/window.svg"
+              alt="Window icon"
+              width={16}
+              height={16}
+            />
+            Examples
+          </a>
+          <a
+            className="flex items-center gap-2 hover:underline hover:underline-offset-4"
+            href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Image
+              aria-hidden
+              src="/globe.svg"
+              alt="Globe icon"
+              width={16}
+              height={16}
+            />
+            Go to nextjs.org →
+          </a>
+        </footer>
+      </div>
+      <Footer />
+      <ScrollToTop />
+    </>
   );
 }
