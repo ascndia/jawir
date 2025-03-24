@@ -1,7 +1,7 @@
 import { Button } from "@/registry/components/button/select";
 import { ArrowRight, Blocks, Settings2 } from "lucide-react";
 
-const FeaturesBento = () => {
+const Features = () => {
   return (
     <div className="min-h-screen flex items-center justify-center">
       <div className="w-full max-w-screen-lg mx-auto py-12 px-6">
@@ -90,4 +90,4 @@ const FeaturesBento = () => {
   );
 };
 
-export default FeaturesBento;
+export default Features;

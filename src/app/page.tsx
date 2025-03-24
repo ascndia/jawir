@@ -2,6 +2,7 @@
 import { Box } from "@/registry/block/box/box-gradient/box";
 import CardCookies from "@/registry/block/card-cookies/card-cookies-1/card-cookies";
 import CardCookies2 from "@/registry/block/card-cookies/card-cookies-2/card-cookies";
+import CardCookies3 from "@/registry/block/card-cookies/card-cookies-3/card-cookies";
 import CardFeature from "@/registry/block/card-feature/card-feature-1/card-feature";
 import CardNotification from "@/registry/block/card-notification/card-notification-1/card-notification";
 import CardPeople from "@/registry/block/card-people/card-people-1/card-people";
@@ -45,9 +46,12 @@ import CardBlogPost from "@/registry/block/card-blog-post/card-blog-post-1/card-
 import CardCheckout from "@/registry/block/card-checkout/card-checkout-1/card-checkout";
 import CardImage from "@/registry/block/card-image/card-image-1/card-image";
 import Announcement from "@/registry/components/announcement/announcement-1/announcement";
+import CardOrderSummary from "@/registry/block/card-order-summary/card-order-summary-1/card-order-summary";
+import Banner from "@/registry/block/banner/banner-2/banner";
 
 const cards = [
   <CardBlogPost key="card-blog-post" />,
+  <CardOrderSummary key="card-order-summary" />,
   <CardImage key="card-image" />,
   <CardCheckout key="card-checkout" />,
   <CardService key="card-service-1" />,
@@ -64,6 +68,7 @@ const cards = [
   <CardTestimony2 key="card-testimony2" />,
   <CardCookies key="card-cookies" />,
   <CardCookies2 key="card-cookies-fixed" />,
+  <CardCookies3 key="card-cookies-fixed2" />,
   <CookiesSettings key="cookies-settings" />,
 ];
 export { cards };
@@ -72,6 +77,7 @@ export default function Home() {
     <>
       <ScrollToDown />
       <Background />
+      <Banner/>
       <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
         <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
           <ModeToggle2 />

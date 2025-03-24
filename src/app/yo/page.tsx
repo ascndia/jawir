@@ -3,7 +3,7 @@ import CompanyLogos from "@/registry/section/company-logos/company-logos-2/compa
 import Faq from "@/registry/section/faq/faq3/faq";
 import React from "react";
 import { CodeBlockBasic } from "../test/d";
-import FeaturesBento from "@/registry/section/features-bento/features-bento-1/features-bento";
+import FeaturesBento from "@/registry/section/features/features-bento-1/features";
 import Testimonial from "@/registry/section/testimonial/testimonial-carousel-1/testimonial";
 import Badge from "@/registry/components/badge/badge-1/badge";
 import ModeToggle from "@/registry/block/mode-toggle/mode-toggle-button/mode-toggle";

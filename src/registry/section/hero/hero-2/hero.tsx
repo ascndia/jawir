@@ -7,8 +7,8 @@ const Hero = () => (
     <div className="container">
       <div className="relative pb-16">
         <div className="magicpattern absolute inset-x-0 top-0 -z-10 flex h-full w-full items-center justify-center opacity-100"></div>
-        <a
-          href="#"
+        <div
+          // href="#"
           className="mx-auto flex w-fit items-center gap-2 rounded-lg bg-secondary p-3 sm:rounded-full sm:py-1 sm:pl-1 sm:pr-3"
         >
           <div className="items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary text-primary-foreground hover:bg-primary/80 hidden sm:block">
@@ -31,7 +31,7 @@ const Hero = () => (
               <path d="m9 18 6-6-6-6"></path>
             </svg>
           </p>
-        </a>
+        </div>
         <h1 className="mx-auto my-5 max-w-screen-lg text-balance text-center text-3xl md:text-5xl">
           Smart home automation and security system for you
         </h1>

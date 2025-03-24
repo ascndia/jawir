@@ -20,7 +20,7 @@ import Footer from "@/registry/section/footer/footer-2/footer";
 import PricingSingle from "@/registry/section/pricing-single/pricing-single-1/pricing-single";
 import { SiteHeader } from "../test/b";
 import FaqCards from "@/registry/section/faq-cards/faq-cards-1/faq-cards";
-import Features from "@/registry/section/features/features-1/features";
+import Features from "@/registry/section/features/features-card-1/features";
 import Testimonial from "@/registry/section/testimonial/testimonial-marquee-1/testimonial";
 import PricingCardsC from "../test/c";
 import { AvatarStack } from "@/registry/block/avatar-stack/avatar-stack-1/avatar-stack";
