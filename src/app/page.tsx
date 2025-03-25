@@ -56,8 +56,10 @@ import ProfileMenu from "@/registry/block/profile-menu/profile-menu-1/profile-me
 import ProfileMenu2 from "@/registry/block/profile-menu/profile-menu-2/profile-menu";
 import Dropdown from "@/registry/block/dropdown/dropdown-button/dropdown";
 import BannerCookies from "@/registry/block/banner/banner-cookie/banner";
+import CardPaper from "@/registry/block/card-paper/card-paper-1/card-paper";
 
 const cards = [
+  <CardPaper key="card-paper" />,
   <CardBlogPost key="card-blog-post" />,
   <CardWeather key="card-weather" />,
   <CardOrderSummary key="card-order-summary" />,
