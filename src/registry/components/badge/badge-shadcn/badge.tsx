@@ -42,6 +42,6 @@ function Badge({
     />
   );
 }
-
+export type BadgeProps = React.ComponentProps<typeof Badge>;
 export { badgeVariants };
 export default Badge;

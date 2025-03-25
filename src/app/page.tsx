@@ -48,10 +48,21 @@ import CardImage from "@/registry/block/card-image/card-image-1/card-image";
 import Announcement from "@/registry/components/announcement/announcement-1/announcement";
 import CardOrderSummary from "@/registry/block/card-order-summary/card-order-summary-1/card-order-summary";
 import Banner from "@/registry/block/banner/banner-2/banner";
+import CardContact from "@/registry/block/card-contact/card-contact-1/card-contact";
+import CardContact2 from "@/registry/block/card-contact/card-contact-2/card-contact";
+import CardWeather from "@/registry/block/card-weather/card-weather-1/card-weather";
+import ContactForm from "@/registry/section/contact-form/contact-form-2/contact-form";
+import ProfileMenu from "@/registry/block/profile-menu/profile-menu-1/profile-menu";
+import ProfileMenu2 from "@/registry/block/profile-menu/profile-menu-2/profile-menu";
+import Dropdown from "@/registry/block/dropdown/dropdown-button/dropdown";
+import BannerCookies from "@/registry/block/banner/banner-cookie/banner";
 
 const cards = [
   <CardBlogPost key="card-blog-post" />,
+  <CardWeather key="card-weather" />,
   <CardOrderSummary key="card-order-summary" />,
+  <CardContact key="card-contact" />,
+  <CardContact2 key="card-contact-2" />,
   <CardImage key="card-image" />,
   <CardCheckout key="card-checkout" />,
   <CardService key="card-service-1" />,
@@ -75,12 +86,16 @@ export { cards };
 export default function Home() {
   return (
     <>
+    <BannerCookies/>
       <ScrollToDown />
       <Background />
       <Banner/>
       <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
         <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
           <ModeToggle2 />
+          <ProfileMenu/>
+          <ProfileMenu2/>
+          <Dropdown/>
           <Announcement>
             New snippets ⚡️
             <span className="inline-flex items-center pl-2 text-black dark:text-white">
@@ -92,6 +107,7 @@ export default function Home() {
             </span>
           </Announcement>
           <DialogScroll />
+          <ContactForm/>
           <UploadImage />
           <CompanyLogos />
           {/* <div className="flex flex-col w-full gap-4"> */}

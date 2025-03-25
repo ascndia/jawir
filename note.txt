@@ -5,10 +5,21 @@ https://www.reactbits.dev/
 https://www.ui-layouts.com/
 https://cursify.vercel.app/
 https://shadcn-ui-blocks.vercel.app/
+https://www.shadcn.io/overview
+https://www.titanium.dev/
+https://inatorsui.vercel.app/
+https://shadcngeeks.vercel.app/
+https://uiverse.io/
+https://getjustd.com/
+https://www.shapexui.site/
+https://eternis-ui.vercel.app/
+https://voxlet-ui.vercel.app/   
+https://vercel.com/geist/introduction
 
 // web
 https://github.com/trypear/pear-landing-page
 https://saas.launchmvpfast.com/
 https://www.prompt-kit.com/
 https://github.com/Davronov-Alimardon/canva-clone
+https://techblitz.dev/
 
