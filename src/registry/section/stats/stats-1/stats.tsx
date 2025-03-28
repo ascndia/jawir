@@ -46,7 +46,7 @@ const Stats = ({
 }: Partial<StatsProps>) => {
   return (
     <section className="py-32">
-      <div className="container">
+      <div className="container mx-auto">
         <div className="flex flex-col gap-4 md:text-start text-center">
           <h2 className="text-2xl font-bold md:text-4xl">{heading}</h2>
           <p>{description}</p>

@@ -7,7 +7,7 @@ import {
   Card,
   CardContent,
   CardDescription,
-  CardFooter,
+  CardHeader,
   CardTitle,
 } from "@/registry/components/card/card-shadcn/card";
 
@@ -27,22 +27,20 @@ const CardTestimony = ({
     key={username}
     className="max-w-md md:break-inside-avoid overflow-hidden"
   >
-    <CardContent>
+    <CardHeader>
       <p className="text-foreground">{comment}</p>
-    </CardContent>
-    <CardFooter>
-      <div className="flex flex-row items-center gap-4 pb-2">
-        <Avatar className="w-12 h-12">
-          <AvatarImage alt="" src={image} />
-          <AvatarFallback>OM</AvatarFallback>
-        </Avatar>
+    </CardHeader>
+    <CardContent className="flex flex-row items-center gap-4">
+      <Avatar className="w-12 h-12">
+        <AvatarImage alt="" src={image} />
+        <AvatarFallback>OM</AvatarFallback>
+      </Avatar>
 
-        <div className="flex flex-col">
-          <CardTitle className="text-lg">{name}</CardTitle>
-          <CardDescription>{username}</CardDescription>
-        </div>
+      <div className="flex flex-col">
+        <CardTitle className="text-lg">{name}</CardTitle>
+        <CardDescription>{username}</CardDescription>
       </div>
-    </CardFooter>
+    </CardContent>
   </Card>
 );
 

@@ -1,5 +1,9 @@
 import { AspectRatio } from "@/registry/components/aspect-ratio";
-import { Avatar, AvatarFallback, AvatarImage } from "@/registry/components/avatar/avatar-shadcn/avatar";
+import {
+  Avatar,
+  AvatarFallback,
+  AvatarImage,
+} from "@/registry/components/avatar/avatar-shadcn/avatar";
 import { Button } from "@/registry/components/button/select";
 
 interface Testimonial {
@@ -42,9 +46,18 @@ const Hero = ({
     role: "CEO",
     company: "Company",
     avatars: [
-      { image: "https://shadcnblocks.com/images/block/avatar-1.webp", fallback: "AB" },
-      { image: "https://shadcnblocks.com/images/block/avatar-2.webp", fallback: "CD" },
-      { image: "https://shadcnblocks.com/images/block/avatar-3.webp", fallback: "EF" },
+      {
+        image: "https://shadcnblocks.com/images/block/avatar-1.webp",
+        fallback: "AB",
+      },
+      {
+        image: "https://shadcnblocks.com/images/block/avatar-2.webp",
+        fallback: "CD",
+      },
+      {
+        image: "https://shadcnblocks.com/images/block/avatar-3.webp",
+        fallback: "EF",
+      },
     ],
   },
   images = {
@@ -70,8 +83,8 @@ const Hero = ({
             <div className="my-6 lg:my-10">
               <Button asChild size="lg">
                 {/* <a href={button.url}> */}
-                    {button.text}
-                    {/* </a> */}
+                {button.text}
+                {/* </a> */}
               </Button>
             </div>
             <div className="flex flex-wrap items-center gap-3">
@@ -79,7 +92,9 @@ const Hero = ({
                 {testimonial.avatars.map((avatar, index) => (
                   <Avatar
                     key={index}
-                    className={`relative z-${index + 1}0 flex h-12 w-12 flex-shrink-0 rounded-full border-2 border-white object-cover`}
+                    className={`relative z-${
+                      index + 1
+                    }0 flex h-12 w-12 flex-shrink-0 rounded-full border-2 border-white object-cover`}
                   >
                     <AvatarImage src={avatar.image} alt="" />
                     <AvatarFallback>{avatar.fallback}</AvatarFallback>

@@ -6,7 +6,7 @@ import {
 import {
   Card,
   CardContent,
-  CardDescription,
+  CardHeader,
   CardTitle,
 } from "@/registry/components/card/card-shadcn/card";
 
@@ -26,13 +26,13 @@ const CardTestimony = ({
     key={username}
     className="max-w-md md:break-inside-avoid overflow-hidden"
   >
+    <CardHeader className="flex flex-row items-center">
+      {/* <div className="flex flex-col"> */}
+      <CardTitle className="text-lg">{name}</CardTitle>
+      {/* </div> */}
+    </CardHeader>
     <CardContent>
-      <div className="flex flex-row items-center gap-4">
-        <div className="flex flex-col">
-          <CardTitle className="text-lg">{name}</CardTitle>
-        </div>
-      </div>
-      <p className="mt-2">{comment}</p>
+      <p>{comment}</p>
     </CardContent>
   </Card>
 );

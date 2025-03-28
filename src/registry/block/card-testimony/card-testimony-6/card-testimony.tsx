@@ -3,6 +3,7 @@ import {
   AvatarFallback,
   AvatarImage,
 } from "@/registry/components/avatar/avatar-shadcn/avatar";
+import { CardHeader } from "@/registry/components/card";
 import {
   Card,
   CardContent,
@@ -26,8 +27,8 @@ const CardTestimony = ({
     key={username}
     className="max-w-md md:break-inside-avoid overflow-hidden"
   >
-    <CardContent>
-      <div className="flex flex-row items-start gap-4 pb-2">
+    <CardContent className="flex flex-row items-start pt-4">
+      <div className="flex flex-row items-start gap-4 ">
         <Avatar className="w-12 h-12">
           <AvatarImage alt="" src={image} />
           <AvatarFallback>OM</AvatarFallback>

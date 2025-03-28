@@ -1,1 +1,7 @@
-`jawir` adalah repository nextjs yang berisi implementasi katalog component dan blocks reactjs untuk kebutuhan front end
+`jawir` adalah repository nextjs yang berisi kumpulan component, blocks, section dan pages untuk kebutuhan front end
+
+attribute:
+
+- `https://github.com/jln13x/ui.jln.dev` for style toggle
+
+tools used:

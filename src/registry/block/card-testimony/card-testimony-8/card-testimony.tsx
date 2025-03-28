@@ -11,6 +11,7 @@ import {
   CardContent,
   CardDescription,
   CardTitle,
+  CardHeader,
 } from "@/registry/components/card/card-shadcn/card";
 type CardTestimonyProps = {
   image: string;
@@ -28,9 +29,9 @@ const CardTestimony: React.FC<Partial<CardTestimonyProps>> = ({
   rating = 5,
 }) => {
   return (
-    <Card className="mb-6 gap-6 overflow-hidden ">
-      <CardContent>
-        <div className="mb-4 flex flex-row">
+    <Card className="overflow-hidden ">
+      <CardHeader>
+        <div className="flex flex-row">
           <Avatar className="mr-4 h-12 w-12">
             <AvatarImage src={"/"} alt={name} />
             <AvatarFallback>{name.charAt(0)}</AvatarFallback>
@@ -44,6 +45,8 @@ const CardTestimony: React.FC<Partial<CardTestimonyProps>> = ({
             </CardDescription>
           </div>
         </div>
+      </CardHeader>
+      <CardContent>
         <p className="mb-4 text-sm text-text-secondary">{text}</p>
         <div className="flex">
           {Array.from({ length: rating }).map((_, index) => (

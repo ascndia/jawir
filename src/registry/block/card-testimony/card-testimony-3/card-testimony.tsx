@@ -1,12 +1,8 @@
 import {
-  Avatar,
-  AvatarFallback,
-  AvatarImage,
-} from "@/registry/components/avatar/avatar-shadcn/avatar";
-import {
   Card,
   CardContent,
   CardDescription,
+  CardHeader,
   CardTitle,
 } from "@/registry/components/card/card-shadcn/card";
 
@@ -26,14 +22,14 @@ const CardTestimony = ({
     key={username}
     className="max-w-md md:break-inside-avoid overflow-hidden"
   >
-    <CardContent>
-      <div className="flex flex-row items-center gap-4">
-        <div className="flex flex-col">
-          <CardTitle className="text-lg">{name}</CardTitle>
-          <CardDescription>{username}</CardDescription>
-        </div>
+    <CardHeader className="flex flex-row items-center gap-4">
+      <div className="flex flex-col">
+        <CardTitle className="text-lg">{name}</CardTitle>
+        <CardDescription>{username}</CardDescription>
       </div>
-      <p className="mt-2">{comment}</p>
+    </CardHeader>
+    <CardContent>
+      <p>{comment}</p>
     </CardContent>
   </Card>
 );

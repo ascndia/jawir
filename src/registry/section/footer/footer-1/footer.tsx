@@ -28,7 +28,7 @@ const Footer = ({
   logo = {
     src: "https://www.shadcnblocks.com/images/block/block-1.svg",
     alt: "blocks for shadcn/ui",
-    title: "Shadcnblocks.com",
+    title: "jawir",
     url: "https://www.shadcnblocks.com",
   },
   tagline = "Components made easy.",
@@ -72,7 +72,7 @@ const Footer = ({
       ],
     },
   ],
-  copyright = "© 2024 Shadcnblocks.com. All rights reserved.",
+  copyright = "© 2024 jawir. All rights reserved.",
   bottomLinks = [
     { text: "Terms and Conditions", url: "#" },
     { text: "Privacy Policy", url: "#" },
