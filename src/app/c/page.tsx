@@ -43,6 +43,8 @@ import {
   AvatarImage,
 } from "@/registry/components/avatar/avatar-shadcn/avatar";
 import Announcement from "@/registry/block/announcement/announcement-1/announcement";
+import TestimonialCards2 from "@/registry/section/testimonial/testimonial-cards-2/testimonial";
+import GalleryMasonry2 from "@/registry/section/gallery/gallery-masonry-2/gallery";
 const Le = () => (
   <AvatarStack3>
     <Avatar>
@@ -66,13 +68,16 @@ const Le = () => (
 function Cohort() {
   return (
     <>
-      {/* <Header /> */}
+      <Header />
+
       <Banner />
       <Banner3 />
       <div className="container pt-6 lg:pt-10 mx-auto">
         <div className="max-w-sm">
           <CardTestimony />
         </div>
+        <TestimonialCards2 />
+        <GalleryMasonry2 />
         <Hero5 />
         <ProductOverview />
         <div className="w-full mx-auto">

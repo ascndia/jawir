@@ -1,6 +1,6 @@
 "use client";
 
-import FormWaitlist from "@/registry/block/form-waitlist/form-waitlist-1/form-waitlist";
+import FormWaitlist from "@/registry/block/form/form-waitlist-1/form-waitlist";
 
 interface AvatarProps {
   initials: string;

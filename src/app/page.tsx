@@ -39,8 +39,8 @@ const availablePages = [
     icon: <Component className="h-4 w-4 mr-2" />,
   },
   {
-    name: "Smart Home Cards",
-    path: "/card2",
+    name: "Faq",
+    path: "/blocks/faq",
     icon: <Grid className="h-4 w-4 mr-2" />,
   },
   {

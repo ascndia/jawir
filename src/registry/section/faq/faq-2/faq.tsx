@@ -49,13 +49,13 @@ interface FaqProps {
   multiple?: boolean;
 }
 
-const Faq = ({
+const Faq2 = ({
   heading = "Frequently asked questions",
   multiple = true,
   items = FAQList,
 }: FaqProps) => {
   return (
-    <section id="faq" className="container mx-auto py-24 sm:py-32">
+    <section id="faq" className="container mx-auto py-24">
       <h2 className="text-3xl md:text-4xl font-bold mb-4">{heading}</h2>
 
       <Accordion
@@ -87,4 +87,4 @@ const Faq = ({
   );
 };
 
-export default Faq;
+export default Faq2;

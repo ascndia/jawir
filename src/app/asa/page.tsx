@@ -8,22 +8,29 @@ import ModeToggle from "@/registry/block/mode-toggle/mode-toggle-group-3/mode-to
 import PricingCards from "@/registry/section/pricing/pricing-cards-1/pricing-cards";
 import Waitlist from "@/registry/section/waitlist/waitlist-1/waitlist";
 import { Toaster } from "sonner";
-import FormWaitlist from "@/registry/block/form-waitlist/form-waitlist-1/form-waitlist";
-import ContactForm from "@/registry/block/card-contact/card-contact-1/card-contact";
+import FormWaitlist from "@/registry/block/form/form-waitlist-1/form-waitlist";
+import ContactForm from "@/registry/block/card/card-contact-1/card-contact";
 import CuisineSelector from "../test/a";
-import { DialogNewsletter } from "@/registry/block/dialog-newsletter/dialog-newsletter-1/dialog-newsletter";
+import { DialogNewsletter } from "@/registry/block/dialogs/dialog-newsletter-1/dialog-newsletter";
 import AutoScrollReveal from "@/registry/components/framer/framer-auto-scroll-reveal/framer-auto-scroll-reveal";
 import { CardTestimony } from "@/registry/block/card-testimony/select";
-import DialogOnboarding from "@/registry/block/dialog-onboarding/dialog-onboarding-1/dialog-onboarding";
+import DialogOnboarding from "@/registry/block/dialogs/dialog-onboarding-1/dialog-onboarding";
 import CopyButton from "@/registry/block/copy-button/copy-button-tooltip/copy-button";
 import Footer from "@/registry/section/footer/footer-2/footer";
 import PricingSingle from "@/registry/section/pricing/pricing-single-1/pricing-single";
 import { SiteHeader } from "../test/b";
-import FaqCards from "@/registry/section/faq/faq-cards-1/faq-cards";
+import FaqCards from "@/registry/section/faq/faq-cards-1/faq";
 import Features from "@/registry/section/features/features-card-1/features";
 import Testimonial from "@/registry/section/testimonial/testimonial-marquee-1/testimonial";
 import PricingCardsC from "../test/c";
 import { AvatarStack } from "@/registry/block/avatar-stack/avatar-stack-1/avatar-stack";
+import FeaturesCard5 from "@/registry/section/features/features-card-5/features";
+import FeaturesMarquee1 from "@/registry/section/features/features-marquee-1/feature";
+import TestimonialMarquee2 from "@/registry/section/testimonial/testimonial-marquee-2/testimonial";
+import TestimonialMarquee3 from "@/registry/section/testimonial/testimonial-marquee-3/testimonial";
+import HeroForm1 from "@/registry/section/hero/hero-form-1/hero";
+import HeroForm2 from "@/registry/section/hero/hero-form-2/hero";
+import BannerCarousel1 from "@/registry/section/banner/banner-carousel-1/banner";
 
 function AnimatedShinyTextDemo() {
   return (
@@ -42,14 +49,21 @@ export default function asa() {
   return (
     <>
       <SiteHeader />
+      <HeroForm2 />
       <div className="container w-full mx-auto p-4">
+        <BannerCarousel1 />
+        <HeroForm1 />
         <AnimatedShinyTextDemo />
         <ModeToggle />
+        <FeaturesMarquee1 />
         <CopyButton />
         <Features />
         <AvatarStack />
         <PricingCardsC />
         <Testimonial />
+        <TestimonialMarquee2 />
+        <TestimonialMarquee3 />
+        <FeaturesCard5 />
         <CuisineSelector />
         <div className="mb-32 mx-auto w-sm">
           <DialogNewsletter />

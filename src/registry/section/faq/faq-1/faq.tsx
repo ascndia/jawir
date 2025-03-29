@@ -16,7 +16,7 @@ interface FaqProps {
   multiple?: boolean;
 }
 
-const Faq = ({
+const Faq1 = ({
   heading = "Frequently asked questions",
   multiple = false,
   items = [
@@ -43,7 +43,7 @@ const Faq = ({
   ],
 }: FaqProps) => {
   return (
-    <section className="py-32">
+    <section className="py-24">
       <div className="container w-full mx-auto">
         <h1 className="mb-4 text-3xl font-semibold md:mb-11 md:text-5xl">
           {heading}
@@ -67,4 +67,4 @@ const Faq = ({
   );
 };
 
-export default Faq;
+export default Faq1;

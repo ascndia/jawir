@@ -31,6 +31,7 @@ import HeroSearch1 from "@/registry/section/hero/hero-search-1/hero";
 import HeroSearch2 from "@/registry/section/hero/hero-search-2/hero";
 import HeroSearch3 from "@/registry/section/hero/hero-search-3/hero";
 import FeaturesCard2 from "@/registry/section/features/features-card-2/features";
+import FeaturesCard4 from "@/registry/section/features/features-card-4/features";
 import DownloadX from "@/registry/section/download/download-x/download";
 import { Download } from "lucide-react";
 import Download1 from "@/registry/section/download/download-1/download";
@@ -44,7 +45,14 @@ import FormFeedback1 from "@/registry/block/form/form-feedback-1/form";
 import HeroPortofolio1 from "@/registry/section/hero/hero-portofolio/hero";
 import ShowcaseProject1 from "@/registry/section/showcase/showcase-project-1/showcase";
 
-const features = [Features1, Features2, Features3, Features4, Features5];
+const features = [
+  Features1,
+  Features2,
+  Features3,
+  Features4,
+  Features5,
+  FeaturesCard4,
+];
 function FeaturesPage() {
   return (
     <>
@@ -55,6 +63,7 @@ function FeaturesPage() {
       <PricingBento />
       <div className="container mx-auto">
         <Hero />
+        <FeaturesCard4 />
         <Download1 />
         <Download2 />
         <FormJobApplication1 />

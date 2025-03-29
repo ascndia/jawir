@@ -1,4 +1,4 @@
-import CardPricing from "@/registry/block/card-pricing/card-pricing-3/card-pricing";
+import CardPricing from "@/registry/block/card/card-pricing-3/card-pricing";
 import { Button } from "@/registry/components/button/select";
 
 const pricingPlans = [
