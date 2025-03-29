@@ -44,6 +44,11 @@ const availablePages = [
     icon: <Grid className="h-4 w-4 mr-2" />,
   },
   {
+    name: "Categories",
+    path: "/blocks/categories",
+    icon: <Layers className="h-4 w-4 mr-2" />,
+  },
+  {
     name: "Landing Pages",
     path: "/landing",
     icon: <Layers className="h-4 w-4 mr-2" />,
@@ -61,6 +66,16 @@ const availablePages = [
   {
     name: "Custom Components",
     path: "/c",
+    icon: <FileCode className="h-4 w-4 mr-2" />,
+  },
+  {
+    name: "Dialogs",
+    path: "/dialog",
+    icon: <FileCode className="h-4 w-4 mr-2" />,
+  },
+  {
+    name: "Layouts",
+    path: "/layout",
     icon: <FileCode className="h-4 w-4 mr-2" />,
   },
 ];

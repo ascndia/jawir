@@ -37,7 +37,7 @@ import ReportDialog from "@/registry/block/dialogs/social/report-dialog";
 import PostCreationDialog from "@/registry/block/dialogs/social/post-creation-dialog";
 import AddToCartDialog from "@/registry/block/dialogs/e-commerce/add-to-cart-dialog";
 import ProductQuickViewDialog from "@/registry/block/dialogs/e-commerce/product-quick-view";
-
+import DialogTour1 from "@/registry/block/dialogs/dialog-tour-1/dialog";
 // Helper component to wrap each dialog with a trigger and state management
 function DialogWrapper({ text, component }: any) {
   const [open, setOpen] = useState(false);
@@ -120,6 +120,7 @@ function DialogPage() {
           component={ProductQuickViewDialog}
           text="Product Quick View Dialog"
         />
+        <DialogWrapper component={DialogTour1} text="Dialog Tour 1" />
       </div>
     </div>
   );

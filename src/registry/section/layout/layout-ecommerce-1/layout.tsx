@@ -480,7 +480,7 @@ export default function LayoutEcommerce1({
                   <div className="flex flex-col gap-4">
                     {cart.map((item) => (
                       <Card key={item.id} className="overflow-hidden">
-                        <div className="flex px-4">
+                        <div className="flex p-3">
                           <div className="h-16 w-16 rounded-md bg-muted mr-4 flex-shrink-0"></div>
                           <div className="flex-1">
                             <h4 className="font-medium text-sm">{item.name}</h4>
