@@ -128,7 +128,7 @@ import { CardFormDiscount1 } from "@/registry/block/card/card-form-discount-1/ca
 import { CardSmartHomePlug1 } from "@/registry/block/card/card-smarthome-plug-1/card";
 import { CardSmartHomeMedia1 } from "@/registry/block/card/card-smarthome-media-1/card";
 import { CardSmartHomeBlinds1 } from "@/registry/block/card/card-smarthome-blinds-1/card";
-import Navbar2 from "@/registry/block/navbar/navbar-2/navbar";
+import Navbar2 from "@/registry/block/header/navbar-2/navbar";
 
 const CardPage = () => {
   return (

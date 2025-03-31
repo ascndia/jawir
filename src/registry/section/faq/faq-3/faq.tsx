@@ -1,95 +1,183 @@
+"use client";
+
+import React, { useState } from "react";
+import { motion } from "framer-motion";
 import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-} from "@/registry/components/accordion/accordion-shadcn/accordion";
+  Lightbulb,
+  HelpCircle,
+  BookOpen,
+} from "lucide-react";
+import {
+  Tabs,
+  TabsContent,
+  TabsList,
+  TabsTrigger,
+} from "@/registry/components/tabs";
 import { cn } from "@/lib/utils";
-import * as AccordionPrimitive from "@radix-ui/react-accordion";
-import { PlusIcon } from "lucide-react";
 
 interface FaqItem {
   question: string;
   answer: string;
+  icon?: React.ReactNode;
 }
 
-interface FaqProps {
+interface Faq3Props {
   heading?: string;
   description?: string;
-  items?: FaqItem[];
-  multiple?: boolean;
+  categories?: {
+    title: string;
+    items: FaqItem[];
+    icon?: React.ReactNode;
+  }[];
 }
 
-const faq: FaqItem[] = [
+const defaultCategories = [
   {
-    question: "What is your return policy?",
-    answer:
-      "You can return unused items in their original packaging within 30 days for a refund or exchange. Contact support for assistance.",
+    title: "General",
+    icon: <HelpCircle className="size-4 mr-2" />,
+    items: [
+      {
+        question: "What makes this product different?",
+        answer:
+          "Our product stands out with its intuitive design, powerful features, and seamless integration capabilities. We've focused on creating a solution that not only meets but anticipates your needs.",
+        icon: <Lightbulb className="size-5 text-primary" />,
+      },
+      {
+        question: "How do I get started?",
+        answer:
+          "Getting started is easy. Simply create an account, complete your profile, and follow our interactive onboarding guide. You'll be up and running in minutes with our step-by-step instructions.",
+        icon: <Lightbulb className="size-5 text-primary" />,
+      },
+    ],
   },
   {
-    question: "How do I track my order?",
-    answer:
-      "Track your order using the link provided in your confirmation email, or log into your account to view tracking details.",
+    title: "Features",
+    icon: <BookOpen className="size-4 mr-2" />,
+    items: [
+      {
+        question: "What are the key features?",
+        answer:
+          "Our platform offers comprehensive analytics, customizable dashboards, seamless third-party integrations, automated reporting, and enterprise-grade security measures to protect your data.",
+        icon: <Lightbulb className="size-5 text-primary" />,
+      },
+      {
+        question: "Is there a mobile application?",
+        answer:
+          "Yes, we offer fully-featured mobile applications for both iOS and Android platforms. Our mobile apps are designed to provide the same powerful experience as our desktop version.",
+        icon: <Lightbulb className="size-5 text-primary" />,
+      },
+    ],
   },
   {
-    question: "Do you ship internationally?",
-    answer:
-      "Yes, we ship worldwide. Shipping fees and delivery times vary by location, and customs duties may apply for some countries.",
-  },
-  {
-    question: "What payment methods do you accept?",
-    answer:
-      "We accept Visa, MasterCard, American Express, PayPal, Apple Pay, and Google Pay, ensuring secure payment options for all customers.",
-  },
-  {
-    question: "What if I receive a damaged item?",
-    answer:
-      "Please contact our support team within 48 hours of delivery with photos of the damaged item. We’ll arrange a replacement or refund.",
+    title: "Support",
+    icon: <HelpCircle className="size-4 mr-2" />,
+    items: [
+      {
+        question: "How can I contact support?",
+        answer:
+          "Our support team is available 24/7 through live chat, email, and phone. We also offer an extensive knowledge base and community forum where you can find answers to common questions.",
+        icon: <Lightbulb className="size-5 text-primary" />,
+      },
+      {
+        question: "Do you offer training sessions?",
+        answer:
+          "Yes, we provide personalized training sessions, webinars, and documentation to help you make the most of our platform. Our customer success team can create a custom training plan for your team.",
+        icon: <Lightbulb className="size-5 text-primary" />,
+      },
+    ],
   },
 ];
 
 const Faq3 = ({
   heading = "Frequently Asked Questions",
-  description = "Quick answers to common questions about our products and services.",
-  items = faq,
-  multiple = false,
-}: FaqProps) => {
-  return (
-    <div className="min-h-screen flex items-center justify-center px-6 py-12">
-      <div className="w-full max-w-2xl">
-        <h2 className="text-4xl md:text-5xl !leading-[1.15] font-bold tracking-tight">
-          {heading}
-        </h2>
-        <p className="mt-1.5 text-lg text-muted-foreground">{description} </p>
+  description = "Find answers to common questions about our products and services.",
+  categories = defaultCategories,
+}: Faq3Props) => {
+  const [activeTab, setActiveTab] = useState(categories[0].title);
 
-        <Accordion
-          type={multiple ? "multiple" : ("single" as const)}
-          className="mt-8 space-y-4"
-          collapsible
-          //   defaultValue="1"
+  return (
+    <section className="py-24">
+      <div className="container px-4 mx-auto max-w-6xl">
+        <div className="text-center mb-16">
+          <motion.h2
+            className="text-4xl font-bold tracking-tight mb-4"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            {heading}
+          </motion.h2>
+          <motion.p
+            className="text-muted-foreground max-w-2xl mx-auto"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+          >
+            {description}
+          </motion.p>
+        </div>
+
+        <Tabs
+          defaultValue={categories[0].title}
+          value={activeTab}
+          onValueChange={setActiveTab}
+          className="w-full"
         >
-          {items.map(({ question, answer }, index) => (
-            <AccordionItem
-              key={question}
-              value={`question-${index}`}
-              className="bg-accent py-1 px-4 rounded-xl border-none "
-            >
-              <AccordionPrimitive.Header className="flex">
-                <AccordionPrimitive.Trigger
-                  className={cn(
-                    "flex flex-1 cursor-pointer items-center justify-between py-4 font-semibold tracking-tight transition-all hover:underline [&[data-state=open]>svg]:rotate-45",
-                    "text-start text-lg"
-                  )}
+          <div className="flex justify-center mb-12">
+            <TabsList className="bg-background/80 backdrop-blur-sm">
+              {categories.map((category, index) => (
+                <TabsTrigger
+                  key={index}
+                  value={category.title}
+                  className="px-6 py-3 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground"
                 >
-                  {question}
-                  <PlusIcon className="h-5 w-5 shrink-0 text-muted-foreground transition-transform duration-200" />
-                </AccordionPrimitive.Trigger>
-              </AccordionPrimitive.Header>
-              <AccordionContent>{answer}</AccordionContent>
-            </AccordionItem>
+                  <span className="flex items-center">
+                    {category.icon}
+                    {category.title}
+                  </span>
+                </TabsTrigger>
+              ))}
+            </TabsList>
+          </div>
+
+          {categories.map((category, categoryIndex) => (
+            <TabsContent
+              key={categoryIndex}
+              value={category.title}
+              className="mt-0"
+            >
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.3 }}
+                className="space-y-6"
+              >
+                {category.items.map((item, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.3, delay: index * 0.1 }}
+                    className="border border-border rounded-lg bg-background p-6"
+                  >
+                    <div className="flex items-start gap-3 mb-4">
+                      {item.icon}
+                      <h3 className="font-medium text-lg text-foreground">{item.question}</h3>
+                    </div>
+                    <div className="ml-8">
+                      <p className="text-muted-foreground">
+                        {item.answer}
+                      </p>
+                    </div>
+                  </motion.div>
+                ))}
+              </motion.div>
+            </TabsContent>
           ))}
-        </Accordion>
+        </Tabs>
       </div>
-    </div>
+    </section>
   );
 };
 

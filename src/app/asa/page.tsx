@@ -31,6 +31,8 @@ import TestimonialMarquee3 from "@/registry/section/testimonial/testimonial-marq
 import HeroForm1 from "@/registry/section/hero/hero-form-1/hero";
 import HeroForm2 from "@/registry/section/hero/hero-form-2/hero";
 import BannerCarousel1 from "@/registry/section/banner/banner-carousel-1/banner";
+import BannerCarousel2 from "@/registry/section/banner/banner-carousel-2/banner";
+import { Features1A, Features1B } from "@/registry/section/features/features-1";
 
 function AnimatedShinyTextDemo() {
   return (
@@ -52,7 +54,10 @@ export default function asa() {
       <HeroForm2 />
       <div className="container w-full mx-auto p-4">
         <BannerCarousel1 />
+        <BannerCarousel2/>
         <HeroForm1 />
+        <Features1A/>
+        <Features1B/>
         <AnimatedShinyTextDemo />
         <ModeToggle />
         <FeaturesMarquee1 />

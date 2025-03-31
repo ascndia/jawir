@@ -4,7 +4,14 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Card, CardContent } from "@/registry/components/card";
 import { ChevronDownIcon, ChevronRightIcon } from "lucide-react";
-import { Book, ShoppingBag, Leaf, Gamepad2, Utensils } from "lucide-react";
+import {
+  Book,
+  ShoppingBag,
+  Leaf,
+  Gamepad2,
+  Utensils,
+  Film,
+} from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const categories = [
@@ -59,6 +66,17 @@ const categories = [
     name: "Education",
     count: 276,
     color: "bg-blue-500/10 text-blue-500",
+    subcategories: [
+      { name: "Online Courses", count: 124 },
+      { name: "Tutorials", count: 87 },
+      { name: "Research", count: 65 },
+    ],
+  },
+  {
+    icon: Film,
+    name: "Film",
+    count: 178,
+    color: "bg-cyan-500/10 text-cyan-500",
     subcategories: [
       { name: "Online Courses", count: 124 },
       { name: "Tutorials", count: 87 },

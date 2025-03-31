@@ -38,7 +38,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/registry/components/sheet";
-import { VisuallyHidden } from "@/registry/components/viusally-hidden/visually-hidden-1/visually-hidden";
+import { VisuallyHidden } from "@/registry/components/visually-hidden/visually-hidden-1/visually-hidden";
 import ModeToggle from "@/registry/block/mode-toggle/mode-toggle-button/mode-toggle";
 import {
   Avatar,

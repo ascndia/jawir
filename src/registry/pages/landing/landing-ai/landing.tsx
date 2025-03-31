@@ -11,7 +11,7 @@ import CTA from "@/registry/section/cta/cta-4/cta";
 import Stats from "@/registry/section/stats/stats-3/stats";
 import LatestArticles from "@/registry/section/latest-articles/latest-articles-2/latest-articles";
 import { Footer } from "@/registry/section/footer/footer-1/footer";
-import Faq from "@/registry/section/faq/faq-2/faq";
+import Faq from "@/registry/section/faq/faq-accordion-2/faq";
 import HeroSearch from "@/registry/section/hero/hero-search-1/hero";
 
 const LandingAI = () => {

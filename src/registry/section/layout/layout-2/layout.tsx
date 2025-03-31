@@ -53,7 +53,7 @@ import {
   AvatarImage,
 } from "@/registry/components/avatar";
 import ModeToggle from "@/registry/block/mode-toggle/mode-toggle-button/mode-toggle"; // Adjust path if needed
-import { VisuallyHidden } from "@/registry/components/viusally-hidden/visually-hidden-1/visually-hidden";
+import { VisuallyHidden } from "@/registry/components/visually-hidden/visually-hidden-1/visually-hidden";
 
 // Define the navigation links structure
 const navLinks = [

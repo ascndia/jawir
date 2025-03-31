@@ -23,8 +23,8 @@ import Stats from "@/registry/section/stats/stats-1/stats";
 import Features from "@/registry/section/features/features-bento-2/features";
 import { AvatarStack } from "@/registry/block/avatar-stack/avatar-stack-2/avatar-stack";
 import AvatarStack3 from "@/registry/block/avatar-stack/avatar-stack-3/avatar-stack";
-import Faq from "@/registry/section/faq/faq-4/faq";
-import Faq2 from "@/registry/section/faq/faq-5/faq";
+import Faq from "@/registry/section/faq/faq-accordion-4/faq";
+import Faq2 from "@/registry/section/faq/faq-accordion-5/faq";
 import StatusSelect from "@/registry/block/status-select/status-select-1/status-select";
 import CreditCard from "@/registry/block/credit-card/credit-card-1/credit-card";
 import CompanyLogos from "@/registry/section/logos/logos-3/company-logos";
@@ -45,6 +45,9 @@ import {
 import Announcement from "@/registry/block/announcement/announcement-1/announcement";
 import TestimonialCards2 from "@/registry/section/testimonial/testimonial-cards-2/testimonial";
 import GalleryMasonry2 from "@/registry/section/gallery/gallery-masonry-2/gallery";
+import HeroSimple1 from "@/registry/section/hero/hero-simple-1/hero";
+import HeroSimple2 from "@/registry/section/hero/hero-simple-2/hero";
+import HeroSimple3 from "@/registry/section/hero/hero-simple-3/haro";
 const Le = () => (
   <AvatarStack3>
     <Avatar>
@@ -69,7 +72,9 @@ function Cohort() {
   return (
     <>
       <Header />
-
+      <HeroSimple1 />
+      <HeroSimple2/>
+      <HeroSimple3/>
       <Banner />
       <Banner3 />
       <div className="container pt-6 lg:pt-10 mx-auto">

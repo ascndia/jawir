@@ -1,6 +1,6 @@
-import Navbar from "@/registry/block/navbar/navbar-1/navbar";
+import Navbar from "@/registry/block/header/navbar-1/navbar";
 import CompanyLogos from "@/registry/section/logos/logos-2/company-logos";
-import Faq from "@/registry/section/faq/faq-3/faq";
+import Faq from "@/registry/section/faq/faq-accordion-3/faq";
 import React from "react";
 import { CodeBlockBasic } from "../test/d";
 import FeaturesBento from "@/registry/section/features/features-bento-1/features";

@@ -10,7 +10,7 @@ import CTA from "@/registry/section/cta/cta-2/cta";
 import Stats from "@/registry/section/stats/stats-1/stats";
 import LatestArticles from "@/registry/section/latest-articles/latest-articles-1/latest-articles";
 import { Footer } from "@/registry/section/footer/footer-1/footer";
-import Faq from "@/registry/section/faq/faq-1/faq";
+import Faq from "@/registry/section/faq/faq-accordion1/faq";
 
 const LandingSaaS = () => {
   return (

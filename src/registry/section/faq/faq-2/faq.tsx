@@ -1,88 +1,88 @@
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/registry/components/accordion/accordion-shadcn/accordion";
-interface FAQProps {
+"use client";
+
+import React from "react";
+import { motion } from "framer-motion";
+
+interface FaqItemProps {
   question: string;
   answer: string;
-  value: string;
 }
 
-const FAQList: FAQProps[] = [
-  {
-    question: "Is this template free?",
-    answer: "Yes. It is a free ChadcnUI template.",
-    value: "item-1",
-  },
-  {
-    question: "Lorem ipsum dolor sit amet consectetur adipisicing elit?",
-    answer:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint labore quidem quam? Consectetur sapiente iste rerum reiciendis animi nihil nostrum sit quo, modi quod.",
-    value: "item-2",
-  },
-  {
-    question:
-      "Lorem ipsum dolor sit amet  Consectetur natus dolores minus quibusdam?",
-    answer:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore qui nostrum reiciendis veritatis necessitatibus maxime quis ipsa vitae cumque quo?",
-    value: "item-3",
-  },
-  {
-    question: "Lorem ipsum dolor sit amet, consectetur adipisicing elit?",
-    answer: "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
-    value: "item-4",
-  },
-  {
-    question:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur natus?",
-    answer:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint labore quidem quam? Consectetur sapiente iste rerum reiciendis animi nihil nostrum sit quo, modi quod.",
-    value: "item-5",
-  },
-];
-
-interface FaqProps {
-  heading?: string;
-  items?: FAQProps[];
-  multiple?: boolean;
+interface Faq2Props {
+  title?: string;
+  subtitle?: string;
+  faqs?: FaqItemProps[];
 }
 
-const Faq2 = ({
-  heading = "Frequently asked questions",
-  multiple = true,
-  items = FAQList,
-}: FaqProps) => {
+const FaqItem = ({ question, answer }: FaqItemProps) => {
   return (
-    <section id="faq" className="container mx-auto py-24">
-      <h2 className="text-3xl md:text-4xl font-bold mb-4">{heading}</h2>
+    <div className="border border-border rounded-lg p-6 bg-card">
+      <h3 className="text-lg font-medium text-foreground mb-2">{question}</h3>
+      <div className="text-muted-foreground">
+        <p>{answer}</p>
+      </div>
+    </div>
+  );
+};
 
-      <Accordion
-        type={multiple ? "multiple" : "single"}
-        className="w-full AccordionRoot"
-      >
-        {items.map(({ question, answer, value }: FAQProps) => (
-          <AccordionItem key={value} value={value}>
-            <AccordionTrigger className="text-left">
-              {question}
-            </AccordionTrigger>
-
-            <AccordionContent>{answer}</AccordionContent>
-          </AccordionItem>
-        ))}
-      </Accordion>
-
-      <h3 className="font-medium mt-4">
-        Still have questions?{" "}
-        <a
-          rel="noreferrer noopener"
-          href="#"
-          className="text-primary transition-all border-primary hover:border-b-2"
-        >
-          Contact us
-        </a>
-      </h3>
+const Faq2: React.FC<Faq2Props> = ({
+  title = "Frequently Asked Questions",
+  subtitle = "Find answers to common questions about our products and services.",
+  faqs = [
+    {
+      question: "How do I create an account?",
+      answer: "You can create an account by clicking the 'Sign Up' button in the top right corner of the homepage. Follow the instructions to complete your registration.",
+    },
+    {
+      question: "What payment methods do you accept?",
+      answer: "We accept all major credit cards, PayPal, and bank transfers. Payment information is securely processed and stored.",
+    },
+    {
+      question: "Can I cancel my subscription at any time?",
+      answer: "Yes, you can cancel your subscription at any time from your account settings. There are no cancellation fees or hidden charges.",
+    },
+    {
+      question: "How can I contact customer support?",
+      answer: "Our customer support team is available 24/7. You can reach us through live chat, email at support@example.com, or by phone at +1 (555) 123-4567.",
+    },
+    {
+      question: "Do you offer refunds?",
+      answer: "Yes, we offer a 30-day money-back guarantee on all our plans. If you're not satisfied with our service, you can request a full refund within 30 days of purchase.",
+    },
+  ],
+}) => {
+  return (
+    <section className="w-full py-12 md:py-16 lg:py-20 bg-background">
+      <div className="container px-4 md:px-6">
+        <div className="text-center max-w-3xl mx-auto mb-10">
+          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-foreground mb-4">
+            {title}
+          </h2>
+          <p className="text-muted-foreground text-lg">
+            {subtitle}
+          </p>
+        </div>
+        
+        <div className="max-w-3xl mx-auto">
+          <motion.div 
+            className="grid gap-6 md:grid-cols-1"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ staggerChildren: 0.1 }}
+          >
+            {faqs.map((faq, index) => (
+              <motion.div
+                key={index}
+                initial={{ y: 20, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+              >
+                <FaqItem question={faq.question} answer={faq.answer} />
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </div>
     </section>
   );
 };

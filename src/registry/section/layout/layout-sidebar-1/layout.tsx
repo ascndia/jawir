@@ -54,7 +54,7 @@ import {
   TabsTrigger,
 } from "@/registry/components/tabs";
 import ModeToggle from "@/registry/block/mode-toggle/mode-toggle-button/mode-toggle";
-import { VisuallyHidden } from "@/registry/components/viusally-hidden/visually-hidden-1/visually-hidden";
+import { VisuallyHidden } from "@/registry/components/visually-hidden/visually-hidden-1/visually-hidden";
 
 const navLinks = [
   { href: "#", icon: Home, label: "Dashboard", badge: null },

@@ -57,7 +57,7 @@ import {
 } from "@/registry/components/tabs";
 import { Separator } from "@/registry/components/separator/separator-shadcn/separator";
 import { FadeIn, SlideIn } from "@/registry/components/framer";
-import { VisuallyHidden } from "../../viusally-hidden/visually-hidden-1/visually-hidden";
+import { VisuallyHidden } from "../../visually-hidden/visually-hidden-1/visually-hidden";
 
 // Types
 export interface MediaItem {

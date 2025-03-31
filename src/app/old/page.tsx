@@ -30,8 +30,8 @@ import {
 import Code from "@/registry/components/code/code-1/code";
 import { ScrollReveal, SlideIn } from "@/registry/components/framer";
 import AutoScrollReveal from "@/registry/components/framer/framer-auto-scroll-reveal/framer-auto-scroll-reveal";
-import Faq from "@/registry/section/faq/faq-1/faq";
-import Faq2 from "@/registry/section/faq/faq-2/faq";
+import Faq from "@/registry/section/faq/faq-accordion1/faq";
+import Faq2 from "@/registry/section/faq/faq-accordion-2/faq";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import { CookiesSettings } from "@/registry/block/cookies/cookies-setting/cookies-setting";
