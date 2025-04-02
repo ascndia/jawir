@@ -7,6 +7,7 @@ import FeaturesBento from "@/registry/section/features/features-bento-1/features
 import Testimonial from "@/registry/section/testimonial/testimonial-carousel-1/testimonial";
 import Badge from "@/registry/components/badge/badge-1/badge";
 import ModeToggle from "@/registry/block/mode-toggle/mode-toggle-button/mode-toggle";
+import Stats1A from "@/registry/section/stats/stats-4";
 
 export default function Page() {
   return (
@@ -41,6 +42,7 @@ export default function Page() {
         />
       ))}
       {/* <Badge /> */}
+      <Stats1A/>
       <ModeToggle />
       <Testimonial />
       <Faq />

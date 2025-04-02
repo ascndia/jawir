@@ -129,16 +129,22 @@ import { CardSmartHomePlug1 } from "@/registry/block/card/card-smarthome-plug-1/
 import { CardSmartHomeMedia1 } from "@/registry/block/card/card-smarthome-media-1/card";
 import { CardSmartHomeBlinds1 } from "@/registry/block/card/card-smarthome-blinds-1/card";
 import Navbar2 from "@/registry/block/header/navbar-2/navbar";
+import { CardFilter1A, CardFilter1B, CardFilter1C } from "@/registry/block/card2/card-filter-1";
 
 const CardPage = () => {
   return (
     <>
       <Navbar2 />
       <div className="container mx-auto p-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-4">
-        <h1 className="text-3xl font-bold mb-8 col-span-full">
-          Card Collection
-        </h1>
-
+        <section>
+          <CardFilter1A/>
+        </section>
+        <section>
+          <CardFilter1B/>
+        </section>
+        <section>
+          <CardFilter1C/>
+        </section>
         <section>
           <CardWeatherBasic />
         </section>

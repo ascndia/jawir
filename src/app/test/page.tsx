@@ -10,14 +10,26 @@ import React from "react";
 import HeroSection from "./e";
 import Newsletter from "@/registry/section/newsletter/newsletter-3/newsletter";
 import PricingCards from "@/registry/section/pricing/pricing-cards-2/pricing-cards";
-import LogosMarquee1 from "@/registry/section/logos/logos-marquee-1/logos";
+import {
+  LogosMarquee1A,
+  LogosMarquee1B,
+  LogosMarquee1C,
+  LogosMarquee1D,
+  LogosMarquee1E,
+  LogosMarquee1F,
+} from "@/registry/section/logos/logos-marquee-1/logos";
 
 export default function Test() {
   return (
     <>
       {/* <StatusSelect/> */}
       <HeroSection />
-      <LogosMarquee1 />
+      <LogosMarquee1A />
+      <LogosMarquee1B />
+      <LogosMarquee1C />
+      <LogosMarquee1D />
+      <LogosMarquee1E />
+      <LogosMarquee1F />
       <Hero />
       <CompanyLogos />
       <PricingCards />

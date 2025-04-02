@@ -10,11 +10,11 @@ const CTANewsletter1A = () => {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className="bg-primary/40 text-background py-12 px-4 text-center"
+      className="bg-primary/40 py-12 px-4 text-center"
     >
       <div className="max-w-lg mx-auto">
         <h2 className="text-3xl font-bold mb-3">Stay Inspired & Save</h2>
-        <p className="text-muted-foreground mb-6">
+        <p className=" mb-6">
           Subscribe to get exclusive travel deals straight to your inbox.
         </p>
 
@@ -39,7 +39,7 @@ const CTANewsletter1B = () => {
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.7 }}
-      className="text-background py-16"
+      className="py-16"
     >
       <div className="container p-12 rounded-xl bg-gradient-to-r from-primary to-primary/70 mx-auto grid md:grid-cols-2 gap-8 items-center">
         <div className="text-left">
@@ -73,7 +73,7 @@ const CTANewsletter1C = () => {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className="bg-background border border-primary/20 shadow-lg py-12 px-6 rounded-2xl"
+      className="bg-background border border-primary/20 shadow-lg py-12 px-6"
     >
       <div className="max-w-3xl mx-auto text-center">
         <motion.div
