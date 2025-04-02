@@ -38,6 +38,8 @@ import PostCreationDialog from "@/registry/block/dialogs/social/post-creation-di
 import AddToCartDialog from "@/registry/block/dialogs/e-commerce/add-to-cart-dialog";
 import ProductQuickViewDialog from "@/registry/block/dialogs/e-commerce/product-quick-view";
 import DialogTour1 from "@/registry/block/dialogs/dialog-tour-1/dialog";
+import { DialogExceeded1A, DialogExceeded1B } from "@/registry/block/dialogs/dialog-exceeded";
+import { DialogMedia1A } from "@/registry/block/dialogs/dialog-media-1";
 // Helper component to wrap each dialog with a trigger and state management
 function DialogWrapper({ text, component }: any) {
   const [open, setOpen] = useState(false);
@@ -54,6 +56,18 @@ function DialogPage() {
     <div className="container mx-auto p-4">
       <h1 className="mb-6 text-2xl font-bold">Dialog Components</h1>
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        <DialogWrapper
+          component={DialogExceeded1A}
+          text="Quota Exceeded Dialog"
+        />
+        <DialogWrapper
+          component={DialogExceeded1B}
+          text="Message Exceeded Dialog"
+        />
+        <DialogWrapper
+          component={DialogMedia1A}
+          text="Video dialog"
+        />
         <DialogWrapper
           component={ConfirmationDialog}
           text="Confirmation Dialog"
