@@ -14,6 +14,8 @@ import FilterPanel from "./filter";
 import TestimonialBento1A from "@/registry/section/testimonial/testimonial-bento-1";
 import { ComparisonTable1A } from "@/registry/section/comparison-table/comparison-table-1";
 import { ComparisonTable2A } from "@/registry/section/comparison-table/comparison-table-2";
+import {Schedule1A, Schedule1B, Schedule1C, Schedule1D} from "@/registry/section/schedule/schedule-1";
+import { GalleryBento2A } from "@/registry/section/gallery/gallery-bento-2";
 
 function Page() {
   return (
@@ -24,6 +26,11 @@ function Page() {
       <div className="max-w-2xl">
       <FilterPanel/>
       </div>
+      <GalleryBento2A/>
+      <Schedule1A/>
+      <Schedule1B/>
+      <Schedule1C/>
+      <Schedule1D/>
       <Test />
       <BetweenVertical>
         <Banner />

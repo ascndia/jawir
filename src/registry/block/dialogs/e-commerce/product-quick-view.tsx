@@ -295,7 +295,7 @@ export default function ProductQuickViewDialog({
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="sm:max-w-[900px] max-h-[90vh] overflow-hidden flex flex-col">
+      <DialogContent className="sm:max-w-[900px] max-h-[90vh] overflow-y-auto flex flex-col">
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
           {/* Product Images */}
           <div className="relative">

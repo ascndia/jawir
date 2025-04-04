@@ -189,7 +189,7 @@ export default function ExportDialog({
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="sm:max-w-[500px]">
+      <DialogContent className="sm:max-w-[500px] max-h-[90vh] overflow-y-auto">
         <DialogHeader className="flex flex-row items-start gap-4">
           <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10">
             <Download className="h-5 w-5 text-primary" />
@@ -348,6 +348,83 @@ export default function ExportDialog({
               </span>
             )}
           </button>
+        </DialogFooter>
+      </DialogContent>
+    </Dialog>
+  );
+}
+
+
+import { Button } from "@/components/ui/button";
+interface ExportDialogProps2 {
+  open?: boolean;
+  onOpenChange?: (open: boolean) => void;
+  onExport?: (arg0: string) => Promise<void>;
+  isLoading?: boolean;
+}
+
+export function DialogExport1B({
+  open = false,
+  onOpenChange,
+  onExport,
+  isLoading = false,
+}: ExportDialogProps2) {
+  const [format, setFormat] = React.useState("csv");
+
+  const handleExport = () => {
+    onExport?.(format);
+  };
+
+  return (
+    <Dialog open={open} onOpenChange={onOpenChange}>
+      <DialogContent className="sm:max-w-md">
+        <DialogHeader>
+          <DialogTitle>Export Data</DialogTitle>
+          <DialogDescription>Select a format to export your data.</DialogDescription>
+        </DialogHeader>
+        <div className="space-y-4">
+          <div className="flex flex-col gap-2">
+            <label className="flex items-center gap-2">
+              <input
+                type="radio"
+                name="format"
+                value="csv"
+                checked={format === "csv"}
+                onChange={() => setFormat("csv")}
+              />
+              CSV
+            </label>
+            <label className="flex items-center gap-2">
+              <input
+                type="radio"
+                name="format"
+                value="xlsx"
+                checked={format === "xlsx"}
+                onChange={() => setFormat("xlsx")}
+              />
+              Excel
+            </label>
+            <label className="flex items-center gap-2">
+              <input
+                type="radio"
+                name="format"
+                value="json"
+                checked={format === "json"}
+                onChange={() => setFormat("json")}
+              />
+              JSON
+            </label>
+          </div>
+        </div>
+        <DialogFooter>
+          <Button
+            onClick={handleExport}
+            disabled={isLoading}
+            className="flex items-center gap-2"
+          >
+            <Download className="h-4 w-4" />
+            {isLoading ? "Exporting..." : "Export"}
+          </Button>
         </DialogFooter>
       </DialogContent>
     </Dialog>

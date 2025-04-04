@@ -207,7 +207,7 @@ export default function SubscriptionUpgradeDialog({
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="sm:max-w-[600px]">
+      <DialogContent className="sm:max-w-5xl max-h-[90vh] overflow-y-auto">
         <DialogHeader>
           <DialogTitle>Upgrade Your Subscription</DialogTitle>
           <DialogDescription>

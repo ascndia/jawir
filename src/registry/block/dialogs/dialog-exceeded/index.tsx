@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { Check, X, ExternalLink } from "lucide-react"
+import { Check, X, ExternalLink, AlertCircle } from "lucide-react"
 import {
   Tabs,
   TabsContent,
@@ -262,6 +262,127 @@ export function DialogExceeded1B({
           </Button>
           <Button disabled={plans.find(p => p.name === selectedPlan)?.current}>
             {plans.find(p => p.name === selectedPlan)?.current ? "Current Plan" : "Upgrade Plan"}
+          </Button>
+        </DialogFooter>
+      </DialogContent>
+    </Dialog>
+  )
+}
+
+export function DialogExceeded1C({
+  open,
+  onOpenChange,
+}: DialogLimitReachedProps) {
+  return (
+    <Dialog open={open} onOpenChange={onOpenChange}>
+      <DialogContent className="sm:max-w-md">
+        <DialogHeader className="flex flex-col items-center text-center">
+          <div className="flex items-center justify-center bg-red-100 dark:bg-red-900/20 p-3 rounded-full mb-4">
+            <AlertCircle className="h-6 w-6 text-red-600 dark:text-red-500" />
+          </div>
+          <DialogTitle className="text-xl font-semibold">Email functionality affected</DialogTitle>
+          <DialogDescription className="text-base pt-2">
+            Your account is out of storage space. You can no longer send or receive emails until you free up space or upgrade your storage plan.
+          </DialogDescription>
+        </DialogHeader>
+        
+        <div className="p-4 my-2 bg-muted/50 rounded-lg">
+          <div className="flex justify-between items-center mb-2">
+            <span className="font-medium">Current usage</span>
+            <span className="text-sm text-muted-foreground">100% full</span>
+          </div>
+          <div className="w-full h-2 bg-muted rounded overflow-hidden">
+            <div className="h-full bg-red-500 w-full"></div>
+          </div>
+          <p className="text-sm mt-4 text-muted-foreground">
+            Upgrade to our <span className="font-medium">Premium Plan</span> for just <span className="font-medium">$5.99/month</span> and get 100GB of storage.
+          </p>
+        </div>
+
+        <DialogFooter className="flex sm:flex-col gap-2 mt-2">
+          <Button 
+            variant="outline" 
+            onClick={() => onOpenChange?.(false)} 
+            className="flex-1 sm:flex-none"
+          >
+            Clean up space
+          </Button>
+          <Button 
+            className="flex-1 sm:flex-none"
+            onClick={() => onOpenChange?.(false)} 
+          >
+            Get more storage
+          </Button>
+        </DialogFooter>
+      </DialogContent>
+    </Dialog>
+  )
+}
+
+export function DialogExceeded1D({
+  open,
+  onOpenChange,
+}: DialogLimitReachedProps) {
+  return (
+    <Dialog open={open} onOpenChange={onOpenChange}>
+      <DialogContent className="sm:max-w-md text-center">
+        <DialogHeader>
+          <DialogTitle>Not enough storage</DialogTitle>
+          <DialogDescription>
+            To make room, get storage or remove items from your account.
+          </DialogDescription>
+        </DialogHeader>
+        <DialogFooter className="flex justify-center gap-4 mt-4">
+          <Button variant="outline" onClick={() => onOpenChange?.(false)}>
+            Clean up space
+          </Button>
+          <Button onClick={() => onOpenChange?.(false)}>Get storage</Button>
+        </DialogFooter>
+      </DialogContent>
+    </Dialog>
+  );
+}
+
+export function DialogExceeded1E({
+  open,
+  onOpenChange,
+}: DialogLimitReachedProps) {
+  return (
+    <Dialog open={open} onOpenChange={onOpenChange}>
+      <DialogContent className="sm:max-w-md">
+        <DialogHeader>
+          <DialogTitle>Storage Limit Reached</DialogTitle>
+          <DialogDescription>
+            Your account has run out of storage space.
+          </DialogDescription>
+        </DialogHeader>
+        
+        <div className="p-3 my-2 bg-muted/50 rounded">
+          <div className="flex justify-between items-center mb-2">
+            <span>Storage</span>
+            <span className="text-sm">100% full</span>
+          </div>
+          <div className="w-full h-2 bg-muted rounded">
+            <div className="h-full bg-red-500 w-full"></div>
+          </div>
+          <p className="text-sm mt-3">
+            Upgrade to Premium: $5.99/month for 100GB
+          </p>
+        </div>
+
+        <DialogFooter className="flex gap-2 mt-2">
+          <Button 
+            variant="outline" 
+            onClick={() => onOpenChange?.(false)} 
+            className="flex-1"
+          >
+            Clean up
+          </Button>
+          <Button 
+            className="flex-1"
+            onClick={() => onOpenChange?.(false)} 
+          >
+            Upgrade
           </Button>
         </DialogFooter>
       </DialogContent>

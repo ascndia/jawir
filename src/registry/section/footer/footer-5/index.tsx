@@ -292,3 +292,77 @@ export function Footer5C() {
   )
 }
 
+
+export const Footer5D = () => {
+  return (
+    <footer className="bg-black py-16 text-white border-t border-white/10">
+      <div className="container mx-auto px-4">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
+          {/* Logo and Description */}
+          <div className="md:col-span-4">
+            <h2 className="text-2xl font-bold mb-4">
+              <span className="festival-gradient">jawir</span>
+            </h2>
+            <p className="text-white/70 mb-6">
+              The biggest annual college arts and music festival, celebrating talent and creativity from across campus.
+            </p>
+            <div className="flex space-x-4">
+              <a href="#" className="text-white/70 hover:text-festival-purple transition-colors">
+                <Facebook size={20} />
+              </a>
+              <a href="#" className="text-white/70 hover:text-festival-pink transition-colors">
+                <Instagram size={20} />
+              </a>
+              <a href="#" className="text-white/70 hover:text-festival-blue transition-colors">
+                <Twitter size={20} />
+              </a>
+            </div>
+          </div>
+          
+          {/* Quick Links */}
+          <div className="md:col-span-2">
+            <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
+            <ul className="space-y-2">
+              <li><a href="#about" className="text-white/70 hover:text-white transition-colors">About</a></li>
+              <li><a href="#lineup" className="text-white/70 hover:text-white transition-colors">Lineup</a></li>
+              <li><a href="#schedule" className="text-white/70 hover:text-white transition-colors">Schedule</a></li>
+              <li><a href="#tickets" className="text-white/70 hover:text-white transition-colors">Tickets</a></li>
+            </ul>
+          </div>
+          
+          {/* Contact */}
+          <div className="md:col-span-3">
+            <h3 className="text-lg font-semibold mb-4">Contact</h3>
+            <ul className="space-y-2 text-white/70">
+              <li>info@jawir.edu</li>
+              <li>(555) 123-4567</li>
+              <li>University Main Campus</li>
+              <li>Student Union Building</li>
+            </ul>
+          </div>
+          
+          {/* Newsletter */}
+          <div className="md:col-span-3">
+            <h3 className="text-lg font-semibold mb-4">Stay Updated</h3>
+            <p className="text-white/70 mb-3">Subscribe to our newsletter for updates</p>
+            <div className="flex">
+              <input 
+                type="email" 
+                placeholder="Your email" 
+                className="px-4 py-2 bg-white/10 border border-white/20 rounded-l-lg text-white w-full focus:outline-none focus:ring-1 focus:ring-festival-purple"
+              />
+              <button className="bg-festival-purple px-4 py-2 rounded-r-lg hover:bg-opacity-90 transition-colors">
+                Subscribe
+              </button>
+            </div>
+          </div>
+        </div>
+        
+        <div className="mt-16 pt-8 border-t border-white/10 text-center text-white/50 text-sm">
+          <p>&copy; {new Date().getFullYear()} jawir. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  );
+};
+

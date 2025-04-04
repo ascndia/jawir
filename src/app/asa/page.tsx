@@ -14,7 +14,6 @@ import CuisineSelector from "../test/a";
 import { DialogNewsletter } from "@/registry/block/dialogs/dialog-newsletter-1/dialog-newsletter";
 import AutoScrollReveal from "@/registry/components/framer/framer-auto-scroll-reveal/framer-auto-scroll-reveal";
 import { CardTestimony } from "@/registry/block/card-testimony/select";
-import DialogOnboarding from "@/registry/block/dialogs/dialog-onboarding-1/dialog-onboarding";
 import CopyButton from "@/registry/block/copy-button/copy-button-tooltip/copy-button";
 import Footer from "@/registry/section/footer/footer-2/footer";
 import PricingSingle from "@/registry/section/pricing/pricing-single-1/pricing-single";
@@ -73,9 +72,7 @@ export default function asa() {
         <div className="mb-32 mx-auto w-sm">
           <DialogNewsletter />
         </div>
-        <div className="mb-32 mx-auto w-sm">
-          <DialogOnboarding />
-        </div>
+ 
         <AutoScrollReveal components={[<CardTestimony key="1" />]} />
         <div className="mb-32 mx-auto w-sm" />
         <FormWaitlist />

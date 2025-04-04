@@ -186,7 +186,7 @@ export default function ReportDialog({
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="sm:max-w-[500px]">
+      <DialogContent className="sm:max-w-[500px] max-h-[90vh] overflow-y-auto">
         <DialogHeader className="flex flex-row items-start gap-4">
           <div className="flex h-10 w-10 items-center justify-center rounded-full bg-destructive/10">
             <Flag className="h-5 w-5 text-destructive" />
@@ -219,7 +219,7 @@ export default function ReportDialog({
                   />
                   <Label
                     htmlFor={`reason-${reason.id}`}
-                    className="flex flex-col"
+                    className="flex flex-col items-start justify-start"
                   >
                     <span className="font-medium">{reason.label}</span>
                     {reason.description && (

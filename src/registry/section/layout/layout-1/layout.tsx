@@ -14,15 +14,15 @@ import {
 } from "lucide-react";
 import * as React from "react"; // Import React
 
-import { Badge } from "@/registry/components/badge";
-import { Button } from "@/registry/components/button";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/registry/components/card";
+} from "@/components/ui/card";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -30,21 +30,21 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/registry/components/dropdown-menu/dropdown-menu-shadcn/dropdown-menu";
-import { Input } from "@/registry/components/input";
+} from "@/components/ui/dropdown-menu";
+import { Input } from "@/components/ui/input";
 import {
   Sheet,
   SheetContent,
   SheetTitle,
   SheetTrigger,
-} from "@/registry/components/sheet";
+} from "@/components/ui/sheet";
 import { VisuallyHidden } from "@/registry/components/visually-hidden/visually-hidden-1/visually-hidden";
 import ModeToggle from "@/registry/block/mode-toggle/mode-toggle-button/mode-toggle";
 import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@/registry/components/avatar";
+} from "@/components/ui/avatar";
 
 // Define the navigation links structure
 const navLinks = [
@@ -339,9 +339,9 @@ export default function Layout1({
           </DropdownMenu>
         </header>
 
-        <main className="flex flex-1 flex-col gap-4 p-4 lg:gap-6 lg:p-6 bg-background">
+        {/* <main className="flex flex-1 flex-col gap-4 p-4 lg:gap-6 lg:p-6 bg-background"> */}
           {children}
-        </main>
+        {/* </main> */}
       </div>
     </div>
   );
