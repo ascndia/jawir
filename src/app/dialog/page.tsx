@@ -29,7 +29,7 @@ import ProductQuickViewDialog from "@/registry/block/dialogs/e-commerce/product-
 import DialogTour1 from "@/registry/block/dialogs/dialog-tour-1/dialog";
 import { DialogExceeded1A, DialogExceeded1B, DialogExceeded1C, DialogExceeded1D, DialogExceeded1E } from "@/registry/block/dialogs/dialog-exceeded";
 import { DialogMedia1A, DialogMedia1B } from "@/registry/block/dialogs/dialog-media-1";
-import { DialogPromotion1A, DialogPromotion1B, DialogPromotion1C } from "@/registry/block/dialogs/dialog-promotion-1";
+import { DialogPromotion1A, DialogPromotion1B, DialogPromotion1C, DialogPromotion1D, DialogPromotion1E, DialogPromotion1F, DialogPromotion1G, DialogPromotion1H, DialogPromotion1I } from "@/registry/block/dialogs/dialog-promotion-1";
 import { Button } from "@/components/ui/button";
 import { DialogOnboarding1A, DialogOnboarding1B, DialogOnboarding1C } from "@/registry/block/dialogs/dialog-onboarding-1/dialog-onboarding";
 import { ReusableDialog } from "@/components/ui/reusable-dialog"; // Import the new component
@@ -48,6 +48,8 @@ import { DialogProduct1A } from "@/registry/block/dialogs/dialog-product-1/index
 import { DialogTutorial1A } from "@/registry/block/dialogs/dialog-tutorial-1";
 import { DialogGallery1A } from "@/registry/block/dialogs/dialog-gallery-1";
 import { DialogLocation1A } from "@/registry/block/dialogs/dialog-location-1";
+import { DialogExpiry1A } from "@/registry/block/dialogs/dialog-expiry";
+import { ServiceFormDialog } from "@/registry/block/dialogs/dialog-multistep/service-form-dialog";
 // Helper component to wrap each dialog with a trigger and state management
 function DialogWrapper({ text, component }: any) {
   const [open, setOpen] = useState(false);
@@ -100,6 +102,14 @@ function DialogPage() {
           </ReusableDialog>
         </div>
         {/* Existing Dialogs */}
+        <DialogWrapper
+          component={ServiceFormDialog}
+          text="Service Form Multistep Dialog"
+        />
+        <DialogWrapper
+          component={DialogExpiry1A}
+          text="Expiry Dialog"
+        />
         <DialogWrapper
           component={DialogLocation1A}
           text="Location Dialog"
@@ -263,6 +273,30 @@ function DialogPage() {
         <DialogWrapper
           component={DialogPromotion1C  }
           text="Promotional Dialog 3"
+        />
+        <DialogWrapper
+          component={DialogPromotion1D  }
+          text="Promotional Dialog 1D"
+        />
+        <DialogWrapper
+          component={DialogPromotion1E}
+          text="Promotional Dialog 1E"
+        />
+        <DialogWrapper
+          component={DialogPromotion1F}
+          text="Promotional Dialog 1F"
+        />
+        <DialogWrapper
+          component={DialogPromotion1G}
+          text="Promotional Dialog 1G"
+        />
+        <DialogWrapper
+          component={DialogPromotion1H}
+          text="Promotional Dialog 1H"
+        />
+        <DialogWrapper
+          component={DialogPromotion1I}
+          text="Promotional Dialog 1I"
         />
         <DialogWrapper
           component={DialogMedia1A}

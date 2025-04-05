@@ -5,10 +5,13 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 // Define reusable stats data
 const stats = [
-    { label: 'Users', value: '1,000+' },
-    { label: 'Downloads', value: '500+' },
-    { label: 'Likes', value: '3,000+' },
+    { label: 'Portfolio Managed', value: '80+' },
+    { label: 'Return on investment', value: '300%' },
+    { label: 'Assets Under Management', value: '$1.4B+' },
+    { label: 'Global customers', value: '2k+' },
+    { label: 'Years of Experience', value: '~10+' },
 ];
+
 
 // Define Framer Motion animation configuration
 const animationConfig = {
@@ -17,7 +20,7 @@ const animationConfig = {
     transition: { duration: 0.5, ease: 'easeOut' },
 };
 
-const Stats1A: React.FC = () => {
+export const Stats1A: React.FC = () => {
     return (
         <motion.section {...animationConfig} className="bg-background py-12">
             <div className="container mx-auto px-4">
@@ -30,7 +33,7 @@ const Stats1A: React.FC = () => {
                                 </CardTitle>
                             </CardHeader>
                             <CardContent>
-                                <p className="text-secondary">{stat.label}</p>
+                                <p className="text-text-primary">{stat.label}</p>
                             </CardContent>
                         </Card>
                     ))}
@@ -40,4 +43,23 @@ const Stats1A: React.FC = () => {
     );
 };
 
-export default Stats1A;
+
+
+
+export const Stats1B: React.FC = () => {
+    return (
+        <motion.section {...animationConfig} className="bg-muted py-16">
+            <div className="container mx-auto px-4">
+                <div className="flex flex-wrap  justify-around gap-8 text-center">
+                    {stats.map((stat, index) => (
+                        <div key={index} className="flex flex-col">
+                            <span className="text-5xl font-semibold text-foreground">{stat.value}</span>
+                            <span className="text-foreground">{stat.label}</span>
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </motion.section>
+    );
+};
+
