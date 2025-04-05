@@ -346,3 +346,14 @@ export default function Layout1({
     </div>
   );
 }
+
+
+const meta = {
+  id: "layout-1",
+  name: "Layout 1",
+  title: "Layout 1",
+  slug: "layout-1",
+  component: Layout1,
+  demo: null,
+};
+export { meta };

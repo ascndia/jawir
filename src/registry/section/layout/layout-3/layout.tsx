@@ -320,3 +320,13 @@ LayoutProps) {
     </div>
   );
 }
+
+const meta = {
+  id: "layout-3",
+  name: "Layout 3",
+  title: "Layout 3",
+  slug: "layout-3",
+  component: Layout3,
+  demo: null,
+};
+export { meta };

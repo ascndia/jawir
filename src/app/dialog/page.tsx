@@ -41,6 +41,7 @@ import { DialogDelete1A, DialogDelete1B } from "@/registry/block/dialogs/dialog-
 import { DialogConfirm1A } from "@/registry/block/dialogs/dialog-confirm-1";
 import { DialogAccounts1A } from "@/registry/block/dialogs/dialog-accounts-1";
 import { DialogFeedback1A } from "@/registry/block/dialogs/feedback";
+import { DialogOnboarding2A } from "@/registry/block/dialogs/dialog-onboarding-1";
 // Helper component to wrap each dialog with a trigger and state management
 function DialogWrapper({ text, component }: any) {
   const [open, setOpen] = useState(false);
@@ -220,6 +221,10 @@ function DialogPage() {
         <DialogWrapper
           component={DialogOnboarding1C}
           text="Onboarding Dialog C"
+        />
+        <DialogWrapper
+          component={DialogOnboarding2A}
+          text="Onboarding Dialog 2A"
         />
         <DialogWrapper
           component={DialogPromotion1A  }

@@ -322,3 +322,6 @@ export function DialogOnboarding1C({ open, onOpenChange }: DialogOnboardingProps
     </Dialog>
   );
 }
+
+
+

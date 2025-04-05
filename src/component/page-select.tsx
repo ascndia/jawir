@@ -59,7 +59,7 @@ export type PageSelectProps<T = any> = {
   initialPageId?: string;
   children?: (component: T) => ReactElement;
   className?: string;
-  position?: "top-right" | "top-left" | "bottom-right" | "bottom-left";
+  position?: "top-right" | "top-left" | "bottom-right" | "bottom-left" | "top-center" | "bottom-center" | "center-right" | "center-left";
 };
 
 // Main component for page selection
@@ -79,7 +79,7 @@ export function PageSelect<T = any>({
   const component = children ? children(selectedPage.component) : null;
 
   return (
-    <div className={cn("relative", className)}>
+    <div className={cn("relative w-full min-h-[100vh]", className)}>
       <PageSelector
         disabled={disabled}
         position={position}
@@ -104,13 +104,17 @@ export function PageSelector({
   availablePages: { component: any; id: string; name: string }[];
   selectedPage: { component: any; id: string; name: string };
   selectPage: (pageId: string) => void;
-  position?: "top-right" | "top-left" | "bottom-right" | "bottom-left";
+  position?: "top-right" | "top-left" | "bottom-right" | "bottom-left" | "top-center" | "bottom-center" | "center-right" | "center-left";
 }) {
   const positionClasses = {
     "top-right": "fixed top-4 right-4 z-10",
     "top-left": "fixed top-4 left-4 z-10",
     "bottom-right": "fixed bottom-4 right-4 z-10",
     "bottom-left": "fixed bottom-4 left-4 z-10",
+    "top-center": "fixed top-4 left-1/2 transform -translate-x-1/2 z-10",
+    "bottom-center": "fixed bottom-4 left-1/2 transform -translate-x-1/2 z-10",
+    "center-right": "fixed top-1/2 right-4 transform -translate-y-1/2 z-10",
+    "center-left": "fixed top-1/2 left-4 transform -translate-y-1/2 z-10",
   };
 
   if (!availablePages || !selectPage) {
@@ -118,13 +122,13 @@ export function PageSelector({
   }
 
   return (
-    <div className={positionClasses[position]}>
+    <div className={cn("z-999", positionClasses[position])}>
       <Select
         value={selectedPage.id}
         onValueChange={selectPage}
         disabled={disabled}
       >
-        <SelectTrigger className="w-[180px]">
+        <SelectTrigger className="w-[180px] bg-background">
           <SelectValue placeholder="Select page" />
         </SelectTrigger>
         <SelectContent>

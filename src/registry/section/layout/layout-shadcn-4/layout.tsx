@@ -47,3 +47,13 @@ export default function LayoutShadcn4({ children }: LayoutProps) {
     </SidebarProvider>
   );
 }
+
+const meta = {
+  id: "layout-shadcn-4",
+  slug: "layout-shadcn-4",
+  name: "Layout Shadcn 4",
+  title: "Layout Shadcn 4",
+  component: LayoutShadcn4,
+  demo: null,
+};
+export { meta };

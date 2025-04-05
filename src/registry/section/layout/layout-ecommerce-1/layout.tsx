@@ -572,3 +572,13 @@ export default function LayoutEcommerce1({
     </div>
   );
 }
+
+const meta = {
+  id: "layout-ecommerce-1",
+  slug: "layout-ecommerce-1",
+  name: "Layout Ecommerce 1",
+  title: "Layout Ecommerce 1",
+  component: LayoutEcommerce1,
+  demo: null,
+};
+export { meta };

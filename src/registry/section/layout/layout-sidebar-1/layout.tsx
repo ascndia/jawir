@@ -305,3 +305,13 @@ export default function LayoutSidebar1({
     </div>
   );
 }
+
+const meta = {
+  id: "layout-sidebar-1",
+  slug: "layout-sidebar-1",
+  name: "Layout Sidebar 1",
+  title: "Layout Sidebar 1",
+  component: LayoutSidebar1,
+  demo: null,
+};
+export { meta };

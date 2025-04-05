@@ -274,3 +274,13 @@ export default function Layout2({
     </TooltipProvider>
   );
 }
+
+const meta = {
+  id: "layout-2",
+  name: "Layout 2",
+  title: "Layout 2",
+  slug: "layout-2",
+  component: Layout2,
+  demo: null,
+};
+export { meta };

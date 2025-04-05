@@ -45,3 +45,13 @@ const Layout4: React.FC<Layout4Props> = ({ children }) => {
 };
 
 export default Layout4;
+
+const meta = {
+  id: "layout-4",
+  name: "Layout 4",
+  title: "Layout 4",
+  slug: "layout-4",
+  component: Layout4,
+  demo: null,
+};
+export { meta };

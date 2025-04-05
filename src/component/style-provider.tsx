@@ -1,6 +1,6 @@
 "use client";
 
-import { type ReactNode } from "react";
+import { useEffect, type ReactNode } from "react";
 
 import { ThemeStyleSheet } from "@/component/theme-style-sheet";
 import { Skeleton } from "@/registry/components/skeleton";
@@ -23,16 +23,32 @@ export const StyleProvider = ({ children }: { children: ReactNode }) => {
     );
 
   const style = themeToStyles(activeTheme);
+  useEffect(() => {
+    const previousStyles = new Map<string, string>();
+  
+    // Save old values and apply new ones
+    Object.entries(style).forEach(([key, value]) => {
+      const cssKey = `--${key.replace(/^--/, '')}`;
+      const oldValue = getComputedStyle(document.body).getPropertyValue(cssKey);
+      previousStyles.set(cssKey, oldValue);
+      document.body.style.setProperty(cssKey, value);
+    });
+  
+    return () => {
+      // Restore old values on cleanup
+      previousStyles.forEach((value, key) => {
+        document.body.style.setProperty(key, value);
+      });
+    };
+  }, [activeTheme, style]);
+  
 
   return (
-    <div
-      style={style}
-      className="h-full w-full rounded-sm bg-background text-foreground"
-    >
+    <>
       {children}
       <Portal.Root asChild>
         <ThemeStyleSheet />
       </Portal.Root>
-    </div>
+    </>
   );
 };

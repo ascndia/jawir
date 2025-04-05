@@ -47,3 +47,13 @@ export default function LayoutShadcn2({ children }: LayoutProps) {
     </SidebarProvider>
   );
 }
+
+const meta = {
+  id: "layout-shadcn-2",
+  slug: "layout-shadcn-2",
+  name: "Layout Shadcn 2",
+  title: "Layout Shadcn 2",
+  component: LayoutShadcn2,
+  demo: null,
+};
+export { meta };

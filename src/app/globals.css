@@ -239,11 +239,6 @@
     font-feature-settings: "rlig" 1, "calt" 1;
   }
 
-  html {
-    scrollbar-gutter: stable;
-  }
-
-  /* Copied from sonner */
   :root {
     --destructive: 0 100% 97%;
     --destructive-foreground: 360 100% 45%;
