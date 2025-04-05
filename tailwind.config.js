@@ -88,6 +88,13 @@ module.exports = {
         loading: {
           to: { transform: "rotate(360deg)" },
         },
+        float: {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-10px)' },
+        },
+        shimmer: {
+          "100%": { transform: "translateX(100%)" },
+        },
       },
       animation: {
         shimmer: "shimmer 8s infinite",
@@ -100,6 +107,8 @@ module.exports = {
         ripple: "ripple var(--duration,2s) ease calc(var(--i, 0)*.2s) infinite",
         spotlight: "spotlight 2s ease .75s 1 forwards",
         loading: "loading 0.6s linear infinite",
+        float: 'float 3s ease-in-out infinite',
+        shimmer: "shimmer 1.5s infinite",
       },
     },
   },

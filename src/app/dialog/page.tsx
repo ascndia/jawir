@@ -42,6 +42,12 @@ import { DialogConfirm1A } from "@/registry/block/dialogs/dialog-confirm-1";
 import { DialogAccounts1A } from "@/registry/block/dialogs/dialog-accounts-1";
 import { DialogFeedback1A } from "@/registry/block/dialogs/feedback";
 import { DialogOnboarding2A } from "@/registry/block/dialogs/dialog-onboarding-1";
+import { DialogUpload1A } from "@/registry/block/dialogs/dialog-upload";
+import { DialogEmptyState1A } from "@/registry/block/dialogs/dialog-empty-state-1";
+import { DialogProduct1A } from "@/registry/block/dialogs/dialog-product-1/index.tsx";
+import { DialogTutorial1A } from "@/registry/block/dialogs/dialog-tutorial-1";
+import { DialogGallery1A } from "@/registry/block/dialogs/dialog-gallery-1";
+import { DialogLocation1A } from "@/registry/block/dialogs/dialog-location-1";
 // Helper component to wrap each dialog with a trigger and state management
 function DialogWrapper({ text, component }: any) {
   const [open, setOpen] = useState(false);
@@ -94,6 +100,26 @@ function DialogPage() {
           </ReusableDialog>
         </div>
         {/* Existing Dialogs */}
+        <DialogWrapper
+          component={DialogLocation1A}
+          text="Location Dialog"
+        />
+        <DialogWrapper
+          component={DialogGallery1A}
+          text="Image gallery Dialog"
+        />
+        <DialogWrapper
+          component={DialogTutorial1A}
+          text="Video Tutorial Dialog"
+        />
+        <DialogWrapper
+          component={DialogProduct1A}
+          text="Product Dialog"
+        />
+        <DialogWrapper
+          component={DialogEmptyState1A}
+          text="Empty State Dialog"
+        />
         <DialogWrapper
           component={DialogAccounts1A}
           text="Manage accounts Dialog"
@@ -276,6 +302,7 @@ function DialogPage() {
         <DialogWrapper component={RatingDialog} text="Rating Dialog" />
         <DialogWrapper component={DialogFeedback1A} text="Feedback Dialog" />
         <DialogWrapper component={FileUploadDialog} text="File Upload Dialog" />
+        <DialogWrapper component={DialogUpload1A} text="Upload Dialog 1A" />
         <DialogWrapper
           component={MultiStepFormDialog}
           text="Multi Step Form Dialog"

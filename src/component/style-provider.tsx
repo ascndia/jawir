@@ -23,22 +23,37 @@ export const StyleProvider = ({ children }: { children: ReactNode }) => {
     );
 
   const style = themeToStyles(activeTheme);
-  useEffect(() => {
-    const previousStyles = new Map<string, string>();
+  // useEffect(() => {
+  //   const previousStyles = new Map<string, string>();
   
-    // Save old values and apply new ones
-    Object.entries(style).forEach(([key, value]) => {
-      const cssKey = `--${key.replace(/^--/, '')}`;
-      const oldValue = getComputedStyle(document.body).getPropertyValue(cssKey);
-      previousStyles.set(cssKey, oldValue);
-      document.body.style.setProperty(cssKey, value);
-    });
+  //   // Save old values and apply new ones
+  //   Object.entries(style).forEach(([key, value]) => {
+  //     const cssKey = `--${key.replace(/^--/, '')}`;
+  //     const oldValue = getComputedStyle(document.body).getPropertyValue(cssKey);
+  //     previousStyles.set(cssKey, oldValue);
+  //     document.body.style.setProperty(cssKey, value);
+  //   });
+  
+  //   return () => {
+  //     // Restore old values on cleanup
+  //     previousStyles.forEach((value, key) => {
+  //       document.body.style.setProperty(key, value);
+  //     });
+  //   };
+  // }, [activeTheme, style]);
+  useEffect(() => {
+    const styleTag = document.createElement("style");
+    styleTag.setAttribute("data-theme-vars", "true");
+  
+    const cssVars = Object.entries(style)
+      .map(([key, value]) => `--${key.replace(/^--/, "")}: ${value};`)
+      .join("\n");
+  
+    styleTag.innerHTML = `:root { ${cssVars} }`;
+    document.head.appendChild(styleTag);
   
     return () => {
-      // Restore old values on cleanup
-      previousStyles.forEach((value, key) => {
-        document.body.style.setProperty(key, value);
-      });
+      styleTag.remove();
     };
   }, [activeTheme, style]);
   
