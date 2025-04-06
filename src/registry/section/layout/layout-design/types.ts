@@ -105,9 +105,11 @@ export type ActiveTool =
   | "opacity"
   | "filter"
   | "settings"
+  | "settings-ai"
   | "ai"
   | "remove-bg"
-  | "templates";
+  | "templates"
+  | "elements";
 
 export const FILL_COLOR = "rgba(0,0,0,1)";
 export const STROKE_COLOR = "rgba(0,0,0,1)";

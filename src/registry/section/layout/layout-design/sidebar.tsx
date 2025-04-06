@@ -8,26 +8,15 @@ import {
   Shapes,
   Sparkles,
   Type,
+  PaintBucket,
+  Blocks,
+  Paintbrush2Icon,
+  SettingsIcon,
 } from "lucide-react";
 
 // import { ActiveTool } from "./types";
 import { SidebarItem } from "./sidebar-item";
-export type ActiveTool =
-  | "select"
-  | "shapes"
-  | "text"
-  | "images"
-  | "draw"
-  | "fill"
-  | "stroke-color"
-  | "stroke-width"
-  | "font"
-  | "opacity"
-  | "filter"
-  | "settings"
-  | "ai"
-  | "remove-bg"
-  | "templates";
+import { ActiveTool } from "./types";
 
 interface SidebarProps {
   activeTool: ActiveTool;
@@ -48,10 +37,28 @@ export const Sidebar = ({
           onClick={() => onChangeActiveTool("templates")}
         />
         <SidebarItem
+          icon={Blocks}
+          label="Elements"
+          isActive={activeTool === "elements"}
+          onClick={() => onChangeActiveTool("elements")}
+        />
+        <SidebarItem
+          icon={SettingsIcon}
+          label="AI Settings"
+          isActive={activeTool === "settings-ai"}
+          onClick={() => onChangeActiveTool("settings-ai")}
+        />
+        <SidebarItem
           icon={ImageIcon}
           label="Image"
           isActive={activeTool === "images"}
           onClick={() => onChangeActiveTool("images")}
+        />
+        <SidebarItem
+          icon={Paintbrush2Icon}
+          label="Fill Color"
+          isActive={activeTool === "fill"}
+          onClick={() => onChangeActiveTool("fill")}
         />
         <SidebarItem
           icon={Type}

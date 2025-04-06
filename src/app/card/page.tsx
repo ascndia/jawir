@@ -33,28 +33,14 @@ import CardChatActivityRecentSessions1 from "@/registry/block/card/card-chat_act
 import CardUserProfileTierStatus1 from "@/registry/block/card/card-user_profile-tier_status-1/card";
 import CardNotificationsList1 from "@/registry/block/card/card-notifications-list-1/card";
 import CardPdfStatsDetailed1 from "@/registry/block/card/card-pdf_stats-detailed-1/card";
-
-// Import new plant cards
 import CardPlantOverview from "@/registry/block/card/card-plant-overview/card";
-// import CardPlantOverview2 from "@/registry/block/card/card-plant-overview-2/card"; // Added
-// import CardPlantOverview3 from "@/registry/block/card/card-plant-overview-3/card"; // Added
 import CardPlantHealth from "@/registry/block/card/card-plant-health/card";
-// import CardPlantHealth2 from "@/registry/block/card/card-plant-health-2/card"; // Placeholder if created
-// import CardPlantHealth3 from "@/registry/block/card/card-plant-health-3/card"; // Placeholder if created
 import CardPlantWatering from "@/registry/block/card/card-plant-watering/card";
-// import CardPlantWatering2 from "@/registry/block/card/card-plant-watering-2/card"; // Placeholder if created
-// import CardPlantWatering3 from "@/registry/block/card/card-plant-watering-3/card"; // Placeholder if created
 import CardPlantEnvironment from "@/registry/block/card/card-plant-environment/card";
-// import CardPlantEnvironment2 from "@/registry/block/card/card-plant-environment-2/card"; // Placeholder if created
-// import CardPlantEnvironment3 from "@/registry/block/card/card-plant-environment-3/card"; // Placeholder if created
 import CardPlantGrowth from "@/registry/block/card/card-plant-growth/card";
-// import CardPlantGrowth2 from "@/registry/block/card/card-plant-growth-2/card"; // Placeholder if created
-// import CardPlantGrowth3 from "@/registry/block/card/card-plant-growth-3/card"; // Placeholder if created
-import CardPlantPests from "@/registry/block/card/card-plant-pests/card"; // Added
-import CardPlantNutrients from "@/registry/block/card/card-plant-nutrients/card"; // Added
-import CardPlantLight from "@/registry/block/card/card-plant-light/card"; // Added
-
-// Import new file hosting cards
+import CardPlantPests from "@/registry/block/card/card-plant-pests/card";
+import CardPlantNutrients from "@/registry/block/card/card-plant-nutrients/card";
+import CardPlantLight from "@/registry/block/card/card-plant-light/card";
 import { CardFileHosting1 } from "@/registry/block/card/card-file-hosting-1/card";
 import { CardFileHosting2 } from "@/registry/block/card/card-file-hosting-2/card";
 import { CardFileHosting3 } from "@/registry/block/card/card-file-hosting-3/card";
@@ -75,8 +61,6 @@ import { CardFileHosting17 } from "@/registry/block/card/card-file-hosting-17/ca
 import { CardFileHosting18 } from "@/registry/block/card/card-file-hosting-18/card";
 import { CardFileHosting19 } from "@/registry/block/card/card-file-hosting-19/card";
 import { CardFileHosting20 } from "@/registry/block/card/card-file-hosting-20/card";
-
-// Import new affiliate cards
 import CardAffiliatePerformanceSummary1 from "@/registry/block/card/card-affiliate-performance-summary-1/card";
 import CardAffiliateReferralLink1 from "@/registry/block/card/card-affiliate-referral-link-1/card";
 import CardAffiliatePayoutBalance1 from "@/registry/block/card/card-affiliate-payout-balance-1/card";
@@ -88,8 +72,6 @@ import CardAffiliateMarketingResources1 from "@/registry/block/card/card-affilia
 import CardAffiliatePerformanceSummary2 from "@/registry/block/card/card-affiliate-performance-summary-2/card";
 import CardAffiliateLinkGenerator1 from "@/registry/block/card/card-affiliate-link-generator-1/card";
 import CardAffiliateRecentActivity1 from "@/registry/block/card/card-affiliate-recent-activity-1/card";
-
-// Import new link shortener cards
 import CardStatsTotalLinks1 from "@/registry/block/card/card-stats-total-links-1/card";
 import CardStatsClicksToday1 from "@/registry/block/card/card-stats-clicks-today-1/card";
 import CardStatsEarningsMonth1 from "@/registry/block/card/card-stats-earnings-month-1/card";
@@ -108,8 +90,6 @@ import CardAccountTierLimits1 from "@/registry/block/card/card-account-tier-limi
 import CardAccountApiKeys1 from "@/registry/block/card/card-account-api-keys-1/card";
 import CardNotificationsAlerts1 from "@/registry/block/card/card-notifications-alerts-1/card";
 import CardActionQuickReports1 from "@/registry/block/card/card-action-quick-reports-1/card";
-// Note: CardPerformanceTopLink1 and CardActionQuickShorten1 were skipped due to errors.
-
 import { CardFormProfile1 } from "@/registry/block/card/card-form-profile-1/card-form";
 import { CardFormPassword1 } from "@/registry/block/card/card-form-password-1/card-form";
 import { CardFormNotifications1 } from "@/registry/block/card/card-form-notifications-1/card-form";
@@ -130,12 +110,20 @@ import { CardSmartHomeMedia1 } from "@/registry/block/card/card-smarthome-media-
 import { CardSmartHomeBlinds1 } from "@/registry/block/card/card-smarthome-blinds-1/card";
 import Navbar2 from "@/registry/block/header/navbar-2/navbar";
 import { CardFilter1A, CardFilter1B, CardFilter1C } from "@/registry/block/card2/card-filter-1";
+import { CardDataPlan1A } from "@/registry/block/card/card-data-plan";
+import { CardCover1A } from "@/registry/block/card/card-cover-1";
 
 const CardPage = () => {
   return (
     <>
       <Navbar2 />
       <div className="container mx-auto p-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-4">
+        <section>
+          <CardCover1A/>
+        </section>
+        <section>
+          <CardDataPlan1A/>
+        </section>
         <section>
           <CardFilter1A/>
         </section>

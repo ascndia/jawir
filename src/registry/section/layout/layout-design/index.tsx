@@ -28,6 +28,8 @@ import { AiSidebar } from "./ai-sidebar";
 import { TemplateSidebar } from "./template-sidebar";
 import { RemoveBgSidebar } from "./remove-bg-sidebar";
 import { SettingsSidebar } from "./settings-sidebar";
+import { ElementSidebar } from "./element-sidebar";
+import SettingsAISidebar from "./sidebar-item/model-setting";
 
 // interface EditorProps {
 //   initialData: ResponseType["data"];
@@ -111,11 +113,19 @@ export const LayoutDesign = ({children}: PropsWithChildren) => {
           activeTool={activeTool}
           onChangeActiveTool={onChangeActiveTool}
         />
+        <SettingsAISidebar
+          activeTool={activeTool}
+          onChangeActiveTool={onChangeActiveTool}
+        />
         <ShapeSidebar
           activeTool={activeTool}
           onChangeActiveTool={onChangeActiveTool}
         />
         <FillColorSidebar
+          activeTool={activeTool}
+          onChangeActiveTool={onChangeActiveTool}
+        />
+        <ElementSidebar
           activeTool={activeTool}
           onChangeActiveTool={onChangeActiveTool}
         />
