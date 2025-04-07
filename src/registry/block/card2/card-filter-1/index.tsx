@@ -1955,3 +1955,5 @@ export  function CardFilter1C({
     </div>
   )
 }
+import CardFilter2A from "./filter-2"
+export { CardFilter2A}

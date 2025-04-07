@@ -12,6 +12,9 @@ import {
   FileCode,
   Home as HomeIcon,
   Github,
+  Table,
+  LucideShieldQuestion,
+  Pointer,
 } from "lucide-react";
 import {
   Card,
@@ -39,9 +42,24 @@ const availablePages = [
     icon: <Component className="h-4 w-4 mr-2" />,
   },
   {
+    name: "Data Table",
+    path: "/datatable",
+    icon: <Table className="h-4 w-4 mr-2" />,
+  },
+  {
     name: "Faq",
     path: "/blocks/faq",
     icon: <Grid className="h-4 w-4 mr-2" />,
+  },
+  {
+    name: "How it Works",
+    path: "/blocks/hiw",
+    icon: <LucideShieldQuestion className="h-4 w-4 mr-2" />,
+  },
+  {
+    name: "CTA",
+    path: "/blocks/cta",
+    icon: <Pointer className="h-4 w-4 mr-2" />,
   },
   {
     name: "Categories",

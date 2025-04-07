@@ -2,6 +2,12 @@
 
 import { MoreVertical, X } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu"
 
 interface CardCover1AProps {
   title?: string
@@ -21,9 +27,22 @@ export function CardCover1A({
         <div className="absolute left-0 right-0 top-0 z-10 flex items-center justify-between p-3">
           <div className="font-bold">GNX</div>
           <div className="flex items-center gap-4">
-            <button className="text-white opacity-80 hover:opacity-100">
-              <MoreVertical size={20} />
-            </button>
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                  <MoreVertical size={20} />
+              </DropdownMenuTrigger>
+              <DropdownMenuContent className="bg-white text-black">
+                <DropdownMenuItem>
+                  Option 1
+                </DropdownMenuItem>
+                <DropdownMenuItem>
+                  Option 2
+                </DropdownMenuItem>
+                <DropdownMenuItem>
+                  Option 3
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
             <button className="text-white opacity-80 hover:opacity-100">
               <X size={20} />
             </button>
@@ -31,12 +50,12 @@ export function CardCover1A({
         </div>
 
         {/* Cover Art with Gradient Overlay */}
-        <div className="relative h-[320px] w-full">
-          <img
+        <div className="relative h-[320px] w-full overflow-hidden">
+        <img
             src={coverArt || "/placeholder.svg"}
             alt={`${title} by ${artist}`}
-            className="h-full w-full object-cover"
-          />
+            className="h-full w-full object-cover transition-transform duration-700 ease-in-out hover:scale-[1.03]"
+            />
           <div className="absolute inset-0 bg-gradient-to-b from-transparent from-60% to-black"></div>
         </div>
       </div>

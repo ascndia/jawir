@@ -50,6 +50,9 @@ import { DialogGallery1A } from "@/registry/block/dialogs/dialog-gallery-1";
 import { DialogLocation1A } from "@/registry/block/dialogs/dialog-location-1";
 import { DialogExpiry1A } from "@/registry/block/dialogs/dialog-expiry";
 import { ServiceFormDialog } from "@/registry/block/dialogs/dialog-multistep/service-form-dialog";
+import { DialogAuth1A, DialogAuth1B } from "@/registry/block/dialogs/dialog-auth-1";
+import { DialogAspectRatio1A } from "@/registry/block/dialogs/dialog-aspect-ratio";
+import { DialogQuiz1A } from "@/registry/block/dialogs/dialog-quiz";
 // Helper component to wrap each dialog with a trigger and state management
 function DialogWrapper({ text, component }: any) {
   const [open, setOpen] = useState(false);
@@ -102,6 +105,22 @@ function DialogPage() {
           </ReusableDialog>
         </div>
         {/* Existing Dialogs */}
+        <DialogWrapper
+          component={DialogAspectRatio1A}
+          text="Aspect ratio Dialog"
+        />
+        <DialogWrapper
+          component={DialogQuiz1A}
+          text="Quiz Dialog"
+        />
+        <DialogWrapper
+          component={DialogAuth1A}
+          text="Auth Dialog"
+        />
+        <DialogWrapper
+          component={DialogAuth1B}
+          text="Social auth Dialog"
+        />
         <DialogWrapper
           component={ServiceFormDialog}
           text="Service Form Multistep Dialog"

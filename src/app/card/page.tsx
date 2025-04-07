@@ -109,15 +109,43 @@ import { CardSmartHomePlug1 } from "@/registry/block/card/card-smarthome-plug-1/
 import { CardSmartHomeMedia1 } from "@/registry/block/card/card-smarthome-media-1/card";
 import { CardSmartHomeBlinds1 } from "@/registry/block/card/card-smarthome-blinds-1/card";
 import Navbar2 from "@/registry/block/header/navbar-2/navbar";
-import { CardFilter1A, CardFilter1B, CardFilter1C } from "@/registry/block/card2/card-filter-1";
+import { CardFilter1A, CardFilter1B, CardFilter1C, CardFilter2A } from "@/registry/block/card2/card-filter-1";
 import { CardDataPlan1A } from "@/registry/block/card/card-data-plan";
-import { CardCover1A } from "@/registry/block/card/card-cover-1";
+import { CardCover1A } from "@/registry/block/card2/card-cover-1";
+import { CardImage1A } from "@/registry/block/card2/card-image-1";
+import { CardSupport1A } from "@/registry/block/card2/card-support-1";
+import { CardImageDetail1A } from "@/registry/block/card2/card-image-detail-1";
+import { CardQuiz } from "@/registry/block/card2/card-quiz";
+import { CardBoard } from "@/registry/block/card2/card-board";
+import { CardProduct1A } from "@/registry/block/card2/card-product-1";
+import { CardCivitAI1A } from "@/registry/block/card2/card-civitai";
 
 const CardPage = () => {
   return (
     <>
       <Navbar2 />
       <div className="container mx-auto p-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-4">
+        <section>
+          <CardCivitAI1A/>
+        </section>
+        <section>
+          <CardProduct1A/>
+        </section>
+        <section>
+          <CardBoard/>
+        </section>
+        <section>
+          <CardQuiz/>
+        </section>
+        <section>
+          <CardSupport1A/>
+        </section>
+        <section>
+          <CardImage1A/>
+        </section>
+        <section>
+          <CardImageDetail1A/>
+        </section>
         <section>
           <CardCover1A/>
         </section>
@@ -132,6 +160,9 @@ const CardPage = () => {
         </section>
         <section>
           <CardFilter1C/>
+        </section>
+        <section>
+          <CardFilter2A/>
         </section>
         <section>
           <CardWeatherBasic />
