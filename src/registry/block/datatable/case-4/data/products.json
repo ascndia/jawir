@@ -1,0 +1,72 @@
+[
+  {
+    "id": "PROD-1001",
+    "name": "Premium Wireless Headphones",
+    "price": "$249.99",
+    "description": "Noise-cancelling over-ear headphones with premium sound quality and 30-hour battery life",
+    "category": "electronics",
+    "status": "in stock",
+    "tags": ["wireless", "audio", "noise-cancelling", "premium", "bluetooth"],
+    "seller": {
+      "name": "TechElite",
+      "rating": "4.8/5",
+      "location": "California, USA"
+    }
+  },
+  {
+    "id": "PROD-2458",
+    "name": "Cotton Casual T-Shirt",
+    "price": "$19.99",
+    "description": "Soft, breathable 100% cotton t-shirt available in multiple colors",
+    "category": "clothing",
+    "status": "in stock",
+    "tags": ["casual", "cotton", "clothing", "summer", "comfortable"],
+    "seller": {
+      "name": "FashionHub",
+      "rating": "4.5/5",
+      "location": "New York, USA"
+    }
+  },
+  {
+    "id": "PROD-3721",
+    "name": "Stainless Steel Water Bottle",
+    "price": "$34.95",
+    "description": "Double-walled insulated bottle that keeps drinks cold for 24 hours or hot for 12 hours",
+    "category": "accessories",
+    "status": "low stock",
+    "tags": ["eco-friendly", "reusable", "insulated", "stainless-steel"],
+    "seller": {
+      "name": "EcoGoods",
+      "rating": "4.7/5",
+      "location": "Portland, USA"
+    }
+  },
+  {
+    "id": "PROD-4892",
+    "name": "Science Fiction Novel Collection",
+    "price": "$65.00",
+    "description": "Box set of award-winning science fiction novels from renowned authors",
+    "category": "books",
+    "status": "out of stock",
+    "tags": ["books", "sci-fi", "collection", "bestseller", "hardcover"],
+    "seller": {
+      "name": "BookWorld",
+      "rating": "4.6/5",
+      "location": "London, UK"
+    }
+  },
+  {
+    "id": "PROD-5063",
+    "name": "Smart Home Security Camera",
+    "price": "$129.99",
+    "description": "Wi-Fi enabled security camera with motion detection and night vision",
+    "category": "electronics",
+    "status": "pre-order",
+    "tags": ["smart-home", "security", "wi-fi", "camera", "motion-detection"],
+    "seller": {
+      "name": "SmartLife",
+      "rating": "4.3/5",
+      "location": "Seattle, USA"
+    }
+  }
+]
