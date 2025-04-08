@@ -8,7 +8,7 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/registry/components/dialog/dialog-shadcn/dialog";
+} from "@/components/ui/dialog";
 import { ScrollArea } from "@/registry/components/scroll-area/scroll-area-shadcn/scroll-area";
 
 export default function DialogScroll() {

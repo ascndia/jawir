@@ -53,6 +53,7 @@ import { ServiceFormDialog } from "@/registry/block/dialogs/dialog-multistep/ser
 import { DialogAuth1A, DialogAuth1B } from "@/registry/block/dialogs/dialog-auth-1";
 import { DialogAspectRatio1A } from "@/registry/block/dialogs/dialog-aspect-ratio";
 import { DialogQuiz1A } from "@/registry/block/dialogs/dialog-quiz";
+import { DialogWithLayout } from "@/registry/block/dialogs/dialog-with-layout";
 // Helper component to wrap each dialog with a trigger and state management
 function DialogWrapper({ text, component }: any) {
   const [open, setOpen] = useState(false);
@@ -105,6 +106,10 @@ function DialogPage() {
           </ReusableDialog>
         </div>
         {/* Existing Dialogs */}
+        <DialogWrapper
+          component={DialogWithLayout}
+          text="Dialog with Layout"
+        />
         <DialogWrapper
           component={DialogAspectRatio1A}
           text="Aspect ratio Dialog"

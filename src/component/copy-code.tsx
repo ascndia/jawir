@@ -7,7 +7,7 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/registry/components/dialog/dialog-shadcn/dialog";
+} from "@/components/ui/dialog";
 import {
   Drawer,
   DrawerContent,

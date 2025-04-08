@@ -10,7 +10,7 @@ import {
   DialogFooter,
   DialogHeader,
   DialogTitle,
-} from "@/registry/components/dialog";
+} from "@/components/ui/dialog";
 import { RadioGroup } from "@/registry/components/radio-group";
 import { Label } from "@/registry/components/label";
 

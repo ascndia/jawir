@@ -19,7 +19,7 @@ import {
   DialogClose,
   DialogOverlay,
   DialogPortal,
-} from "@/registry/components/dialog";
+} from "@/components/ui/dialog";
 import { Button } from "@/registry/components/button/select";
 import Badge from "@/registry/components/badge/badge-shadcn/badge";
 import { Skeleton } from "@/registry/components/skeleton";

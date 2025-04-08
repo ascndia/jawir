@@ -23,6 +23,7 @@ import {
   DropdownMenuContent,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
+import { DataTableViewOptions } from "./data-table-view-option"
 
 
 interface DataTableProps<TData, TValue> {
@@ -65,7 +66,8 @@ export function DataTable<TData, TValue>({ columns, data }: DataTableProps<TData
           onChange={(event) => table.getColumn("title")?.setFilterValue(event.target.value)}
           className="max-w-sm"
         />
-        <DropdownMenu>
+        <DataTableViewOptions table={table} />
+        {/* <DropdownMenu>
           <DropdownMenuTrigger asChild>
             <Button variant="outline" className="ml-auto">
               Columns
@@ -88,7 +90,7 @@ export function DataTable<TData, TValue>({ columns, data }: DataTableProps<TData
                 )
               })}
           </DropdownMenuContent>
-        </DropdownMenu>
+        </DropdownMenu> */}
       </div>
       <div className="rounded-md border">
         <Table>

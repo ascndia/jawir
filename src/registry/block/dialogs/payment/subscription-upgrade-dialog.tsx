@@ -10,7 +10,7 @@ import {
   DialogFooter,
   DialogHeader,
   DialogTitle,
-} from "@/registry/components/dialog";
+} from "@/components/ui/dialog";
 import Button from "@/registry/components/button/button-shadcn/button";
 // import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 // import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";

@@ -17,7 +17,7 @@ import {
   DialogFooter,
   DialogHeader,
   DialogTitle,
-} from "@/registry/components/dialog";
+} from "@/components/ui/dialog";
 import { Button } from "@/registry/components/button";
 
 type TourStep = {

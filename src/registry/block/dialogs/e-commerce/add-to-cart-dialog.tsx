@@ -14,7 +14,7 @@ import {
   DialogFooter,
   DialogHeader,
   DialogTitle,
-} from "@/registry/components/dialog";
+} from "@/components/ui/dialog";
 import Button from "@/registry/components/button/button-shadcn/button";
 import { Separator } from "@/registry/components/separator";
 import { ScrollArea } from "@/registry/components/scroll-area";

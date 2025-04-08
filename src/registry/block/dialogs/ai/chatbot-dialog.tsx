@@ -9,7 +9,7 @@ import {
   DialogDescription,
   DialogHeader,
   DialogTitle,
-} from "@/registry/components/dialog";
+} from "@/components/ui/dialog";
 import Button from "@/registry/components/button/button-shadcn/button";
 import { Textarea } from "@/registry/components/textarea";
 import { ScrollArea } from "@/registry/components/scroll-area";

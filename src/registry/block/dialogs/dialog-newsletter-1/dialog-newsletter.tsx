@@ -11,7 +11,7 @@ import {
   DialogDescription,
   DialogTitle,
   DialogTrigger,
-} from "@/registry/components/dialog/dialog-shadcn/dialog";
+} from "@/components/ui/dialog";
 import { Input } from "@/registry/components/input/input-shadcn/input";
 import {
   Avatar,

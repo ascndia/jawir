@@ -42,13 +42,21 @@ export function DataTableViewOptions<TData>({
               typeof column.accessorFn !== "undefined" && column.getCanHide()
           )
           .map((column) => {
-            return (
-              <DropdownMenuCheckboxItem
-                key={column.id}
-                className="capitalize"
-                checked={column.getIsVisible()}
-                onCheckedChange={(value) => column.toggleVisibility(!!value)}
-              >
+              const onCheckedChange = (value: boolean) => {
+                  column.toggleVisibility(value)
+              }
+              return (
+                <DropdownMenuCheckboxItem
+                    key={column.id}
+                    className="capitalize"
+                    checked={column.getIsVisible()}
+                    onCheckedChange={onCheckedChange}
+                    onClick={(e) => {
+                        onCheckedChange(!column.getIsVisible())
+                        e.stopPropagation()
+                        e.preventDefault()
+                    }}
+                  >
                 {column.id === "name" ? "Product Name" : 
                  column.id === "price" ? "Price" : 
                  column.id === "category" ? "Category" : 

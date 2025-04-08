@@ -10,7 +10,7 @@ import {
   DialogFooter,
   DialogHeader,
   DialogTitle,
-} from "@/registry/components/dialog";
+} from "@/components/ui/dialog";
 import Button from "@/registry/components/button/button-shadcn/button";
 import { Progress } from "@/registry/components/progress";
 import { Input } from "@/registry/components/input";

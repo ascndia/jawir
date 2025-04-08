@@ -1,0 +1,127 @@
+[
+  {
+    "id": "PROJ-001",
+    "name": "Website Redesign",
+    "owner": "Alex Johnson",
+    "status": "active",
+    "dueDate": "2025-06-15",
+    "progress": 65,
+    "metadata": {
+      "github": "https://github.com/company/website-redesign",
+      "figma": "https://figma.com/file/website-mockups",
+      "gdrive": "https://drive.google.com/folders/website-assets"
+    }
+  },
+  {
+    "id": "PROJ-002",
+    "name": "Mobile App Development",
+    "owner": "Sarah Chen",
+    "status": "active",
+    "dueDate": "2025-07-30",
+    "progress": 42,
+    "metadata": {
+      "github": "https://github.com/company/mobile-app",
+      "figma": "https://figma.com/file/app-designs",
+      "jira": "https://company.atlassian.net/browse/APP"
+    }
+  },
+  {
+    "id": "PROJ-003",
+    "name": "Product Launch Campaign",
+    "owner": "Michael Brown",
+    "status": "pending",
+    "dueDate": "2025-05-28",
+    "progress": 15,
+    "metadata": {
+      "gdrive": "https://drive.google.com/folders/launch-docs",
+      "slack": "https://company.slack.com/archives/launch-team"
+    }
+  },
+  {
+    "id": "PROJ-004",
+    "name": "Infrastructure Upgrade",
+    "owner": "David Wilson",
+    "status": "completed",
+    "dueDate": "2025-03-31",
+    "progress": 100,
+    "metadata": {
+      "github": "https://github.com/company/infra-upgrade",
+      "jira": "https://company.atlassian.net/browse/INFRA"
+    }
+  },
+  {
+    "id": "PROJ-005",
+    "name": "Customer Portal",
+    "owner": "Emma Garcia",
+    "status": "active",
+    "dueDate": "2025-08-15",
+    "progress": 30,
+    "metadata": {
+      "github": "https://github.com/company/customer-portal",
+      "figma": "https://figma.com/file/portal-designs",
+      "jira": "https://company.atlassian.net/browse/PORTAL"
+    }
+  },
+  {
+    "id": "PROJ-006",
+    "name": "Analytics Dashboard",
+    "owner": "James Miller",
+    "status": "canceled",
+    "dueDate": "2025-05-10",
+    "progress": 25,
+    "metadata": {
+      "github": "https://github.com/company/analytics",
+      "figma": "https://figma.com/file/dashboard-mockups"
+    }
+  },
+  {
+    "id": "PROJ-007",
+    "name": "Content Management System",
+    "owner": "Olivia Taylor",
+    "status": "active",
+    "dueDate": "2025-09-20",
+    "progress": 55,
+    "metadata": {
+      "github": "https://github.com/company/cms",
+      "jira": "https://company.atlassian.net/browse/CMS",
+      "slack": "https://company.slack.com/archives/cms-team"
+    }
+  },
+  {
+    "id": "PROJ-008",
+    "name": "Security Audit",
+    "owner": "William Davis",
+    "status": "completed",
+    "dueDate": "2025-04-05",
+    "progress": 100,
+    "metadata": {
+      "gdrive": "https://drive.google.com/folders/security-docs",
+      "jira": "https://company.atlassian.net/browse/SEC"
+    }
+  },
+  {
+    "id": "PROJ-009",
+    "name": "API Integration",
+    "owner": "Sophia Martinez",
+    "status": "pending",
+    "dueDate": "2025-06-30",
+    "progress": 10,
+    "metadata": {
+      "github": "https://github.com/company/api-integration",
+      "gdrive": "https://drive.google.com/folders/api-docs"
+    }
+  },
+  {
+    "id": "PROJ-010",
+    "name": "User Testing",
+    "owner": "Daniel Lee",
+    "status": "active",
+    "dueDate": "2025-07-15",
+    "progress": 70,
+    "metadata": {
+      "figma": "https://figma.com/file/user-flows",
+      "gdrive": "https://drive.google.com/folders/testing-results",
+      "slack": "https://company.slack.com/archives/user-testing"
+    }
+  }
+]

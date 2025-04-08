@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { TourDialog } from "./tour-dialog"
 import { TourProvider, useTour } from "./tour-provider"
+import { CollapsibleCard } from "./card"
 
 function DemoContent() {
   const { startTour } = useTour()
@@ -193,6 +194,9 @@ function DemoContent() {
 export default function Page() {
   return (
     <TourProvider>
+      <CollapsibleCard title="Example Title">
+        <p>This is an example content for the CollapsibleCard.</p>
+      </CollapsibleCard>
       <DemoContent />
     </TourProvider>
   )

@@ -15,7 +15,7 @@ import {
   DialogOverlay,
   DialogPortal,
   DialogTitle,
-} from "@/registry/components/dialog";
+} from "@/components/ui/dialog";
 import { Button } from "@/registry/components/button/select";
 import { Skeleton } from "@/registry/components/skeleton";
 import Badge from "@/registry/components/badge/badge-shadcn/badge";
