@@ -54,6 +54,7 @@ import { DialogAuth1A, DialogAuth1B } from "@/registry/block/dialogs/dialog-auth
 import { DialogAspectRatio1A } from "@/registry/block/dialogs/dialog-aspect-ratio";
 import { DialogQuiz1A } from "@/registry/block/dialogs/dialog-quiz";
 import { DialogWithLayout } from "@/registry/block/dialogs/dialog-with-layout";
+import DialogInfo1A from "@/registry/block/dialogs/dialog-info-1";
 // Helper component to wrap each dialog with a trigger and state management
 function DialogWrapper({ text, component }: any) {
   const [open, setOpen] = useState(false);
@@ -106,6 +107,10 @@ function DialogPage() {
           </ReusableDialog>
         </div>
         {/* Existing Dialogs */}
+        <DialogWrapper
+          component={DialogInfo1A}
+          text="Dialog Info"
+        />
         <DialogWrapper
           component={DialogWithLayout}
           text="Dialog with Layout"
