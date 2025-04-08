@@ -55,6 +55,7 @@ import { DialogAspectRatio1A } from "@/registry/block/dialogs/dialog-aspect-rati
 import { DialogQuiz1A } from "@/registry/block/dialogs/dialog-quiz";
 import { DialogWithLayout } from "@/registry/block/dialogs/dialog-with-layout";
 import DialogInfo1A from "@/registry/block/dialogs/dialog-info-1";
+import { DialogNewsletter1A } from "@/registry/block/dialogs/dialog-newsletter-1";
 // Helper component to wrap each dialog with a trigger and state management
 function DialogWrapper({ text, component }: any) {
   const [open, setOpen] = useState(false);
@@ -67,49 +68,18 @@ function DialogWrapper({ text, component }: any) {
   );
 }
 function DialogPage() {
-  const [isReusableDialogOpen, setIsReusableDialogOpen] = useState(false); // State for the new dialog
 
   return (
     <div className="container mx-auto p-4">
       <h1 className="mb-6 text-2xl font-bold">Dialog Components</h1>
       <div className="grid grid-cols-3 gap-4 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
-        {/* Example Usage of ReusableDialog */}
-        <div className="flex items-center justify-center">
-          <Button onClick={() => setIsReusableDialogOpen(true)}>
-            Open Reusable Dialog
-          </Button>
-          <ReusableDialog
-            open={isReusableDialogOpen}
-            onOpenChange={setIsReusableDialogOpen}
-            title="Reusable Dialog Title"
-            description={
-              <span>
-                This is a <b>description</b> using a React node.
-              </span>
-            }
-            
-            footer={
-              <>
-                <Button
-                  variant="outline"
-                  onClick={() => setIsReusableDialogOpen(false)}
-                >
-                  Cancel
-                </Button>
-                <Button onClick={() => setIsReusableDialogOpen(false)}>
-                  Confirm
-                </Button>
-              </>
-            }
-          >
-            <p>This is the main content area of the reusable dialog.</p>
-            <p>You can put any React node here.</p>
-          </ReusableDialog>
-        </div>
-        {/* Existing Dialogs */}
         <DialogWrapper
           component={DialogInfo1A}
           text="Dialog Info"
+        />
+        <DialogWrapper
+          component={DialogNewsletter1A}
+          text="Dialog Newsletter 1A"
         />
         <DialogWrapper
           component={DialogWithLayout}

@@ -121,12 +121,16 @@ import { CardProduct1A } from "@/registry/block/card2/card-product-1";
 import { CardCivitAI1A } from "@/registry/block/card2/card-civitai";
 import CardPricing2A from "@/registry/block/card2/card-pricing/inex";
 import CardInfo1A from "@/registry/block/card/card-info-1/card";
+import CardNewsletter1 from "@/registry/block/card/card-newsletter-1/card";
 
 const CardPage = () => {
   return (
     <>
       <Navbar2 />
       <div className="container mx-auto p-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-4">
+        <section>
+          <CardNewsletter1/>
+        </section>
         <section>
           <CardInfo1A/>
         </section>
