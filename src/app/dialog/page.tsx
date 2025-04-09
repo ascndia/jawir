@@ -56,6 +56,7 @@ import { DialogQuiz1A } from "@/registry/block/dialogs/dialog-quiz";
 import { DialogWithLayout } from "@/registry/block/dialogs/dialog-with-layout";
 import DialogInfo1A from "@/registry/block/dialogs/dialog-info-1";
 import { DialogNewsletter1A } from "@/registry/block/dialogs/dialog-newsletter-1";
+import { DialogSelect1A } from "@/registry/block/dialogs/dialog-select-1";
 // Helper component to wrap each dialog with a trigger and state management
 function DialogWrapper({ text, component }: any) {
   const [open, setOpen] = useState(false);
@@ -73,6 +74,10 @@ function DialogPage() {
     <div className="container mx-auto p-4">
       <h1 className="mb-6 text-2xl font-bold">Dialog Components</h1>
       <div className="grid grid-cols-3 gap-4 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
+        <DialogWrapper
+          component={DialogSelect1A}
+          text="Dialog Select 1A"
+        />
         <DialogWrapper
           component={DialogInfo1A}
           text="Dialog Info"
